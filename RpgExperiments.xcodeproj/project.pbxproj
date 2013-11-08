@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7507C8C4172EDE320042FB66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7507C8C3172EDE320042FB66 /* Cocoa.framework */; };
+		7507C8CE172EDE320042FB66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7507C8CC172EDE320042FB66 /* InfoPlist.strings */; };
+		7507C8D0172EDE320042FB66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8CF172EDE320042FB66 /* main.m */; };
+		7507C8D4172EDE320042FB66 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7507C8D2172EDE320042FB66 /* Credits.rtf */; };
+		7507C8D7172EDE320042FB66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8D6172EDE320042FB66 /* AppDelegate.m */; };
+		7507C8DA172EDE320042FB66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7507C8D8172EDE320042FB66 /* MainMenu.xib */; };
+		7507C8F4172F05370042FB66 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E2172F047D0042FB66 /* Dice.m */; };
+		7507C8F5172F05370042FB66 /* DiceNotationTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */; };
+		7507C8F6172F05370042FB66 /* DiceNotationTermStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */; };
+		7507C8F7172F05370042FB66 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8EE172F047D0042FB66 /* Coordinate.m */; };
+		7507C8F8172F05370042FB66 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8F0172F047D0042FB66 /* Vector.m */; };
+		7535DA74173FDBFE000C193D /* QuestNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535DA73173FDBFE000C193D /* QuestNode.m */; };
+		756F0AE517342A4A008D007B /* NSValue+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE417342A4A008D007B /* NSValue+Coordinate.m */; };
+		756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE717342AE8008D007B /* NSValue+Vector.m */; };
+		75C16F9517311AB900074D0F /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9117311AB900074D0F /* Tile.m */; };
+		75C16F9617311AB900074D0F /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9417311AB900074D0F /* Map.m */; };
+		75C16F9917311AF500074D0F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9817311AF500074D0F /* MapView.m */; };
+		75C16F9C173162A400074D0F /* Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9B173162A400074D0F /* Builder.m */; };
+		75C16FA01731667E00074D0F /* CaveBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9F1731667E00074D0F /* CaveBuilder.m */; };
+		75C16FA3173166AA00074D0F /* DungeonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16FA2173166AA00074D0F /* DungeonBuilder.m */; };
+		75C16FAA1731871400074D0F /* SeededRandomGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16FA91731871400074D0F /* SeededRandomGenerator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7507C8C0172EDE320042FB66 /* RpgExperiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RpgExperiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7507C8C3172EDE320042FB66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7507C8C6172EDE320042FB66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7507C8C7172EDE320042FB66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7507C8C8172EDE320042FB66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7507C8CB172EDE320042FB66 /* RpgExperiments-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RpgExperiments-Info.plist"; sourceTree = "<group>"; };
+		7507C8CD172EDE320042FB66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7507C8CF172EDE320042FB66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7507C8D1172EDE320042FB66 /* RpgExperiments-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RpgExperiments-Prefix.pch"; sourceTree = "<group>"; };
+		7507C8D3172EDE320042FB66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7507C8D5172EDE320042FB66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7507C8D6172EDE320042FB66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7507C8D9172EDE320042FB66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7507C8E1172F047D0042FB66 /* Dice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
+		7507C8E2172F047D0042FB66 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		7507C8E3172F047D0042FB66 /* DiceNotationTerm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiceNotationTerm.h; sourceTree = "<group>"; };
+		7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiceNotationTerm.m; sourceTree = "<group>"; };
+		7507C8E5172F047D0042FB66 /* DiceNotationTermStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiceNotationTermStack.h; sourceTree = "<group>"; };
+		7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiceNotationTermStack.m; sourceTree = "<group>"; };
+		7507C8ED172F047D0042FB66 /* Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
+		7507C8EE172F047D0042FB66 /* Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		7507C8EF172F047D0042FB66 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		7507C8F0172F047D0042FB66 /* Vector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
+		7535DA72173FDBFE000C193D /* QuestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestNode.h; path = Grammar/QuestNode.h; sourceTree = "<group>"; };
+		7535DA73173FDBFE000C193D /* QuestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestNode.m; path = Grammar/QuestNode.m; sourceTree = "<group>"; };
+		75650CA31738EB82002C9264 /* Tile+Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tile+Builder.h"; sourceTree = "<group>"; };
+		756F0AE317342A4A008D007B /* NSValue+Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Coordinate.h"; sourceTree = "<group>"; };
+		756F0AE417342A4A008D007B /* NSValue+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Coordinate.m"; sourceTree = "<group>"; };
+		756F0AE617342AE8008D007B /* NSValue+Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Vector.h"; sourceTree = "<group>"; };
+		756F0AE717342AE8008D007B /* NSValue+Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Vector.m"; sourceTree = "<group>"; };
+		75C16F9017311AB900074D0F /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		75C16F9117311AB900074D0F /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		75C16F9317311AB900074D0F /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		75C16F9417311AB900074D0F /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
+		75C16F9717311AF500074D0F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		75C16F9817311AF500074D0F /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		75C16F9A173162A400074D0F /* Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Builder.h; sourceTree = "<group>"; };
+		75C16F9B173162A400074D0F /* Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Builder.m; sourceTree = "<group>"; };
+		75C16F9E1731667E00074D0F /* CaveBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaveBuilder.h; path = Builders/CaveBuilder.h; sourceTree = "<group>"; };
+		75C16F9F1731667E00074D0F /* CaveBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaveBuilder.m; path = Builders/CaveBuilder.m; sourceTree = "<group>"; };
+		75C16FA1173166AA00074D0F /* DungeonBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DungeonBuilder.h; sourceTree = "<group>"; };
+		75C16FA2173166AA00074D0F /* DungeonBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DungeonBuilder.m; sourceTree = "<group>"; };
+		75C16FA417316A7C00074D0F /* Map+Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Map+Builder.h"; sourceTree = "<group>"; };
+		75C16FA81731871400074D0F /* SeededRandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeededRandomGenerator.h; sourceTree = "<group>"; };
+		75C16FA91731871400074D0F /* SeededRandomGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeededRandomGenerator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7507C8BD172EDE320042FB66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7507C8C4172EDE320042FB66 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7507C8B7172EDE320042FB66 = {
+			isa = PBXGroup;
+			children = (
+				7507C8C9172EDE320042FB66 /* RpgExperiments */,
+				7507C8C2172EDE320042FB66 /* Frameworks */,
+				7507C8C1172EDE320042FB66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7507C8C1172EDE320042FB66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7507C8C0172EDE320042FB66 /* RpgExperiments.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7507C8C2172EDE320042FB66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7507C8C3172EDE320042FB66 /* Cocoa.framework */,
+				7507C8C5172EDE320042FB66 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7507C8C5172EDE320042FB66 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7507C8C6172EDE320042FB66 /* AppKit.framework */,
+				7507C8C7172EDE320042FB66 /* CoreData.framework */,
+				7507C8C8172EDE320042FB66 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7507C8C9172EDE320042FB66 /* RpgExperiments */ = {
+			isa = PBXGroup;
+			children = (
+				7507C8D5172EDE320042FB66 /* AppDelegate.h */,
+				7507C8D6172EDE320042FB66 /* AppDelegate.m */,
+				7507C8D8172EDE320042FB66 /* MainMenu.xib */,
+				75C16F9717311AF500074D0F /* MapView.h */,
+				75C16F9817311AF500074D0F /* MapView.m */,
+				7507C8E0172F047D0042FB66 /* Dice */,
+				7535DA71173FCF77000C193D /* QuestBuilder */,
+				75C16F8F17311AB900074D0F /* Map */,
+				7507C8CA172EDE320042FB66 /* Supporting Files */,
+				7507C8EC172F047D0042FB66 /* Utilities */,
+			);
+			path = RpgExperiments;
+			sourceTree = "<group>";
+		};
+		7507C8CA172EDE320042FB66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7507C8CB172EDE320042FB66 /* RpgExperiments-Info.plist */,
+				7507C8CC172EDE320042FB66 /* InfoPlist.strings */,
+				7507C8CF172EDE320042FB66 /* main.m */,
+				7507C8D1172EDE320042FB66 /* RpgExperiments-Prefix.pch */,
+				7507C8D2172EDE320042FB66 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7507C8E0172F047D0042FB66 /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				7507C8E1172F047D0042FB66 /* Dice.h */,
+				7507C8E2172F047D0042FB66 /* Dice.m */,
+				7507C8E3172F047D0042FB66 /* DiceNotationTerm.h */,
+				7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */,
+				7507C8E5172F047D0042FB66 /* DiceNotationTermStack.h */,
+				7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
+		7507C8EC172F047D0042FB66 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7507C8ED172F047D0042FB66 /* Coordinate.h */,
+				7507C8EE172F047D0042FB66 /* Coordinate.m */,
+				756F0AE317342A4A008D007B /* NSValue+Coordinate.h */,
+				756F0AE417342A4A008D007B /* NSValue+Coordinate.m */,
+				756F0AE617342AE8008D007B /* NSValue+Vector.h */,
+				756F0AE717342AE8008D007B /* NSValue+Vector.m */,
+				75C16FA81731871400074D0F /* SeededRandomGenerator.h */,
+				75C16FA91731871400074D0F /* SeededRandomGenerator.m */,
+				7507C8EF172F047D0042FB66 /* Vector.h */,
+				7507C8F0172F047D0042FB66 /* Vector.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7535DA71173FCF77000C193D /* QuestBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				7535DA72173FDBFE000C193D /* QuestNode.h */,
+				7535DA73173FDBFE000C193D /* QuestNode.m */,
+			);
+			name = QuestBuilder;
+			sourceTree = "<group>";
+		};
+		75C16F8F17311AB900074D0F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				75C16F9A173162A400074D0F /* Builder.h */,
+				75C16F9B173162A400074D0F /* Builder.m */,
+				75C16F9017311AB900074D0F /* Tile.h */,
+				75C16F9117311AB900074D0F /* Tile.m */,
+				75650CA31738EB82002C9264 /* Tile+Builder.h */,
+				75C16F9317311AB900074D0F /* Map.h */,
+				75C16F9417311AB900074D0F /* Map.m */,
+				75C16FA417316A7C00074D0F /* Map+Builder.h */,
+				75C16F9D1731666400074D0F /* Builders */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		75C16F9D1731666400074D0F /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				75C16F9E1731667E00074D0F /* CaveBuilder.h */,
+				75C16F9F1731667E00074D0F /* CaveBuilder.m */,
+				75C16FA1173166AA00074D0F /* DungeonBuilder.h */,
+				75C16FA2173166AA00074D0F /* DungeonBuilder.m */,
+			);
+			name = Builders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7507C8BF172EDE320042FB66 /* RpgExperiments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7507C8DD172EDE320042FB66 /* Build configuration list for PBXNativeTarget "RpgExperiments" */;
+			buildPhases = (
+				7507C8BC172EDE320042FB66 /* Sources */,
+				7507C8BD172EDE320042FB66 /* Frameworks */,
+				7507C8BE172EDE320042FB66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RpgExperiments;
+			productName = RpgExperiments;
+			productReference = 7507C8C0172EDE320042FB66 /* RpgExperiments.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7507C8B8172EDE320042FB66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Serdar Üşenmez";
+			};
+			buildConfigurationList = 7507C8BB172EDE320042FB66 /* Build configuration list for PBXProject "RpgExperiments" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7507C8B7172EDE320042FB66;
+			productRefGroup = 7507C8C1172EDE320042FB66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7507C8BF172EDE320042FB66 /* RpgExperiments */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7507C8BE172EDE320042FB66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7507C8CE172EDE320042FB66 /* InfoPlist.strings in Resources */,
+				7507C8D4172EDE320042FB66 /* Credits.rtf in Resources */,
+				7507C8DA172EDE320042FB66 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7507C8BC172EDE320042FB66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7507C8D7172EDE320042FB66 /* AppDelegate.m in Sources */,
+				7507C8F7172F05370042FB66 /* Coordinate.m in Sources */,
+				7507C8F4172F05370042FB66 /* Dice.m in Sources */,
+				7507C8F5172F05370042FB66 /* DiceNotationTerm.m in Sources */,
+				7507C8F6172F05370042FB66 /* DiceNotationTermStack.m in Sources */,
+				7507C8D0172EDE320042FB66 /* main.m in Sources */,
+				7507C8F8172F05370042FB66 /* Vector.m in Sources */,
+				75C16F9517311AB900074D0F /* Tile.m in Sources */,
+				75C16F9617311AB900074D0F /* Map.m in Sources */,
+				75C16F9917311AF500074D0F /* MapView.m in Sources */,
+				75C16F9C173162A400074D0F /* Builder.m in Sources */,
+				75C16FA01731667E00074D0F /* CaveBuilder.m in Sources */,
+				75C16FA3173166AA00074D0F /* DungeonBuilder.m in Sources */,
+				75C16FAA1731871400074D0F /* SeededRandomGenerator.m in Sources */,
+				756F0AE517342A4A008D007B /* NSValue+Coordinate.m in Sources */,
+				756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */,
+				7535DA74173FDBFE000C193D /* QuestNode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7507C8CC172EDE320042FB66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7507C8CD172EDE320042FB66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7507C8D2172EDE320042FB66 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7507C8D3172EDE320042FB66 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7507C8D8172EDE320042FB66 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7507C8D9172EDE320042FB66 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7507C8DB172EDE320042FB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7507C8DC172EDE320042FB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7507C8DE172EDE320042FB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RpgExperiments/RpgExperiments-Prefix.pch";
+				INFOPLIST_FILE = "RpgExperiments/RpgExperiments-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7507C8DF172EDE320042FB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RpgExperiments/RpgExperiments-Prefix.pch";
+				INFOPLIST_FILE = "RpgExperiments/RpgExperiments-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7507C8BB172EDE320042FB66 /* Build configuration list for PBXProject "RpgExperiments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7507C8DB172EDE320042FB66 /* Debug */,
+				7507C8DC172EDE320042FB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7507C8DD172EDE320042FB66 /* Build configuration list for PBXNativeTarget "RpgExperiments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7507C8DE172EDE320042FB66 /* Debug */,
+				7507C8DF172EDE320042FB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7507C8B8172EDE320042FB66 /* Project object */;
+}
