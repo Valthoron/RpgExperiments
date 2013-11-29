@@ -8,7 +8,7 @@
 
 #import "Vector.h"
 
-inline Vector MakeVector(NSUInteger x, NSUInteger y)
+inline Vector MakeVector(NSInteger x, NSInteger y)
 {
 	Vector v;
 	v.x = x;

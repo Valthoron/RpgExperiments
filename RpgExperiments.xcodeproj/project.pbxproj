@@ -21,6 +21,7 @@
 		7535DA74173FDBFE000C193D /* QuestNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535DA73173FDBFE000C193D /* QuestNode.m */; };
 		756F0AE517342A4A008D007B /* NSValue+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE417342A4A008D007B /* NSValue+Coordinate.m */; };
 		756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE717342AE8008D007B /* NSValue+Vector.m */; };
+		75BAB0D21847818400F9CB65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BAB0D11847818400F9CB65 /* QuartzCore.framework */; };
 		75C16F9517311AB900074D0F /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9117311AB900074D0F /* Tile.m */; };
 		75C16F9617311AB900074D0F /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9417311AB900074D0F /* Map.m */; };
 		75C16F9917311AF500074D0F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9817311AF500074D0F /* MapView.m */; };
@@ -61,6 +62,8 @@
 		756F0AE417342A4A008D007B /* NSValue+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Coordinate.m"; sourceTree = "<group>"; };
 		756F0AE617342AE8008D007B /* NSValue+Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Vector.h"; sourceTree = "<group>"; };
 		756F0AE717342AE8008D007B /* NSValue+Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Vector.m"; sourceTree = "<group>"; };
+		75BAB0CF184780BE00F9CB65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		75BAB0D11847818400F9CB65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		75C16F9017311AB900074D0F /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		75C16F9117311AB900074D0F /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		75C16F9317311AB900074D0F /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BAB0D21847818400F9CB65 /* QuartzCore.framework in Frameworks */,
 				7507C8C4172EDE320042FB66 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +114,8 @@
 		7507C8C2172EDE320042FB66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75BAB0D11847818400F9CB65 /* QuartzCore.framework */,
+				75BAB0CF184780BE00F9CB65 /* CoreGraphics.framework */,
 				7507C8C3172EDE320042FB66 /* Cocoa.framework */,
 				7507C8C5172EDE320042FB66 /* Other Frameworks */,
 			);
@@ -247,7 +253,7 @@
 		7507C8B8172EDE320042FB66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Serdar Üşenmez";
 			};
 			buildConfigurationList = 7507C8BB172EDE320042FB66 /* Build configuration list for PBXProject "RpgExperiments" */;
@@ -339,7 +345,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -372,7 +377,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;

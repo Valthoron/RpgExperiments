@@ -13,6 +13,7 @@
 {
 	NSUInteger tileSize;
 	Map* map;
+	CALayer* mapLayer;
 }
 
 - (void)setMap:(Map*)aMap;

@@ -10,10 +10,10 @@
 
 typedef struct
 {
-	NSUInteger x, y;
+	NSInteger x, y;
 } Vector;
 
-inline Vector MakeVector(NSUInteger x, NSUInteger y);
+inline Vector MakeVector(NSInteger x, NSInteger y);
 inline Vector VectorAdd(Vector v1, Vector v2);
 inline Vector VectorSubtract(Vector v1, Vector v2);
 inline Vector VectorNegative(Vector v);

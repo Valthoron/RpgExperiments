@@ -8,31 +8,34 @@
 
 #import "MapView.h"
 
-static float const tileSize = 20.f;
-
 @implementation MapView
 
 - (id)initWithFrame:(NSRect)frame
 {
-    self = [super initWithFrame:frame];
+	self = [super initWithFrame:frame];
 	
-    if (self)
+	if (self)
 	{
-		tileSize = 10;
-    }
-    
-    return self;
+		tileSize = 20;
+		
+		self.layer = [CALayer layer];
+		self.wantsLayer = YES;
+		
+		mapLayer = [CALayer layer];
+		mapLayer.delegate = self;
+		mapLayer.frame = CGRectMake(0.0, 0.0, frame.size.width, frame.size.height);
+		[self.layer addSublayer:mapLayer];
+	}
+	
+	return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
+- (void)drawLayer:(CALayer*)layer inContext:(CGContextRef)ctx
 {
-    NSGraphicsContext* context = [NSGraphicsContext currentContext];
-	[context setShouldAntialias:NO];
-	
-	CGContextRef contextRef = (CGContextRef)context.graphicsPort;
-	CGContextSelectFont(contextRef, "Arial", 0.5, kCGEncodingMacRoman);
-	
-	[context saveGraphicsState];
+	CGContextSaveGState(ctx);
+	CGContextSetShouldAntialias(ctx, false);
+	CGContextSelectFont(ctx, "Arial", 10, kCGEncodingMacRoman);
+	CGContextSetStrokeColorWithColor(ctx, [NSColor lightGrayColor].CGColor);
 	
 	for (NSUInteger v = 0; v < map.height; v++)
 	{
@@ -44,42 +47,42 @@ static float const tileSize = 20.f;
 			switch (tile.tileId)
 			{
 				case 1:
-					[[NSColor redColor] set];
-					CGContextFillRect(contextRef, tileBounds);
+					CGContextSetFillColorWithColor(ctx, [NSColor redColor].CGColor);
+					CGContextFillRect(ctx, tileBounds);
 					break;
 					
 				case 2:
-					[[NSColor orangeColor] set];
-					CGContextFillRect(contextRef, tileBounds);
+					CGContextSetFillColorWithColor(ctx, [NSColor orangeColor].CGColor);
+					CGContextFillRect(ctx, tileBounds);
 					break;
 					
 				case 3:
-					[[NSColor greenColor] set];
-					CGContextFillRect(contextRef, tileBounds);
+					CGContextSetFillColorWithColor(ctx, [NSColor greenColor].CGColor);
+					CGContextFillRect(ctx, tileBounds);
 					break;
 					
 				case 4:
-					[[NSColor blueColor] set];
-					CGContextFillRect(contextRef, tileBounds);
+					CGContextSetFillColorWithColor(ctx, [NSColor blueColor].CGColor);
+					CGContextFillRect(ctx, tileBounds);
 					break;
 					
 				default:
 					break;
 			}
 			
-			[[NSColor lightGrayColor] set];
+			CGContextSetFillColorWithColor(ctx, [NSColor blackColor].CGColor);
 			
 			if (tile.sectionId != 0)
 			{
 				NSString* sectionString = [NSString stringWithFormat:@"%ld", (unsigned long)tile.sectionId];
-				CGContextShowTextAtPoint(contextRef, tileBounds.origin.x + 2, tileBounds.origin.y + 2, sectionString.UTF8String, sectionString.length);
+				CGContextShowTextAtPoint(ctx, tileBounds.origin.x + 2, tileBounds.origin.y + 2, sectionString.UTF8String, sectionString.length);
 			}
 			
-			CGContextStrokeRect(contextRef, tileBounds);
+			CGContextStrokeRect(ctx, tileBounds);
 		}
 	}
 	
-	[context restoreGraphicsState];
+	CGContextRestoreGState(ctx);
 }
 
 - (void)setMap:(Map*)aMap
@@ -91,14 +94,25 @@ static float const tileSize = 20.f;
 	frame.size.height = (map.height * tileSize) + 7;
 	self.frame = frame;
 	
+	mapLayer.frame = CGRectMake(0.0, 0.0, frame.size.width, frame.size.height);
+	
 	[self setNeedsDisplay:YES];
+	[mapLayer setNeedsDisplay];
 }
 
 - (void)setTileSize:(NSUInteger)theTileSize
 {
 	tileSize = theTileSize;
 	
+	CGRect frame = self.frame;
+	frame.size.width = (map.width * tileSize) + 7;
+	frame.size.height = (map.height * tileSize) + 7;
+	self.frame = frame;
+	
+	mapLayer.frame = CGRectMake(0.0, 0.0, frame.size.width, frame.size.height);
+	
 	[self setNeedsDisplay:YES];
+	[mapLayer setNeedsDisplay];
 }
 
 @end
