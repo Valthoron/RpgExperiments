@@ -17,11 +17,13 @@
 
 @property (nonatomic, readonly) NSUInteger width;
 @property (nonatomic, readonly) NSUInteger height;
-@property (nonatomic, readonly) NSString* builderName;
-@property (nonatomic, readonly) NSString* builderConfigurationHash;
-@property (nonatomic, readonly) NSUInteger builderSeed;
+@property (nonatomic, readwrite) NSString* builderName;
+@property (nonatomic, readwrite) NSDictionary* builderConfiguration;
+@property (nonatomic, readwrite) unsigned int builderSeed;
 
 - (id)initWithWidth:(NSUInteger)width andHeight:(NSUInteger)height;
 - (Tile*)tileAt:(Coordinate)coordinate;
+- (BOOL)containsCoordinate:(Coordinate)coordinate;
+- (BOOL)containsCoordinate:(Coordinate)coordinate withinBand:(NSUInteger)band;
 
 @end

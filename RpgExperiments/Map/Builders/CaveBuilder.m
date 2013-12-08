@@ -7,6 +7,8 @@
 //
 
 #import "CaveBuilder.h"
+#import "Builder_Subclass.h"
+#import "BuilderParameter.h"
 
 @implementation CaveBuilder
 
@@ -16,159 +18,164 @@
 	
     if (self)
 	{
-		_initialPopulation = 0.50f;
-		_neighborhoodSize = 2;
-		_threshold = 13;
-		_iterations = 3;
+		[parameters addObject:[BuilderParameter floatParameter:&initialPopulation withName:@"initialPopulation" andDefaultValue:0.6f]];
+		[parameters addObject:[BuilderParameter intParameter:&neighborhoodSize withName:@"neighborhoodSize" andDefaultValue:2]];
+		[parameters addObject:[BuilderParameter intParameter:&threshold withName:@"threshold" andDefaultValue:14]];
+		[parameters addObject:[BuilderParameter intParameter:&iterations withName:@"iterations" andDefaultValue:3]];
     }
 	
     return self;
 }
 
-- (NSString*)getConfigurationHash
-{
-	return [NSString stringWithFormat:@"Initial population = %f, Neighborhood size = %d, Threshold = %d, Iterations = %d", _initialPopulation, _neighborhoodSize, _threshold, _iterations];
-}
-
 - (void)buildMap
 {
+	neighborCounts = (int*)malloc(width * height * sizeof(int));
+	
 	[self seedCells];
 	
-	for (int i = 0; i < _iterations; i++)
-	{
+	for (int i = 0; i < iterations; i++)
 		[self workCells];
-	}
 	
 	[self enumerateSections];
-}
-
-- (void)setTileIds:(NSUInteger)tileId inRect:(NSRect)rect
-{
-	NSUInteger xMin = rect.origin.x;
-	NSUInteger xMax = rect.origin.x + rect.size.width - 1;
-	NSUInteger yMin = rect.origin.y;
-	NSUInteger yMax = rect.origin.y + rect.size.height -1;
 	
-	for (NSUInteger x = xMin; x <= xMax; x++)
-	{
-		for (NSUInteger y = yMin; y <= yMax; y++)
-		{
-			[map tileAt:MakeCoordinate(x, y)].tileId = tileId;
-		}
-	}
+	free(neighborCounts);
 }
 
 - (void)seedCells
 {
-	[map iterateTilesUsingBlock:^(Tile *tile)
-	 {
-		 if ((tile.location.x < _neighborhoodSize) ||
-			 (tile.location.x >= (map.width - _neighborhoodSize)) ||
-			 (tile.location.y < _neighborhoodSize) ||
-			 (tile.location.y >= (map.height - _neighborhoodSize)))
-			 return;
-		 
-		 if ([random nextFloat] < _initialPopulation)
-		 {
-			 tile.tileId = 1;
-		 }
-	 }];
+	for (int y = 0; y < map.height; y++)
+	{
+		for (int x = 0; x < map.width; x++)
+		{
+			Coordinate coordinate = MakeCoordinate(x, y);
+			
+			Tile* tile = [map tileAt:coordinate];
+			
+			if (![map containsCoordinate:coordinate withinBand:neighborhoodSize])
+				continue;
+			
+			if ([random nextFloat] < initialPopulation)
+			{
+				tile.tileId = 1;
+			}
+		}
+	}
 }
 
 - (void)workCells
 {
 	// Count neighbors for each cell
-	[map iterateTilesUsingBlock:^(Tile *tile)
-	 {
-		 if ((tile.location.x < _neighborhoodSize) ||
-			 (tile.location.x >= (map.width - _neighborhoodSize)) ||
-			 (tile.location.y < _neighborhoodSize) ||
-			 (tile.location.y >= (map.height - _neighborhoodSize)))
-			 return;
-		 
-		 int neighborCount = 0;
-		 
-		 for (int x = -_neighborhoodSize; x <= _neighborhoodSize; x++)
-		 {
-			 for (int y = -_neighborhoodSize; y <= _neighborhoodSize; y++)
-			 {
-				 if ((x == 0) && (y == 0))
-					 continue;
-				 
-				 if ([map tileAt:MakeCoordinate(tile.location.x + x, tile.location.y + y)].tileId == 0)
-					 neighborCount++;
-			 }
-		 }
-		 
-		 tile.builderData1 = neighborCount;
-	 }];
-	
+	for (int y = 0; y < map.height; y++)
+	{
+		for (int x = 0; x < map.width; x++)
+		{
+			Coordinate coordinate = MakeCoordinate(x, y);
+			
+			if (![map containsCoordinate:coordinate withinBand:neighborhoodSize])
+				continue;
+			
+			int neighborCount = 0;
+			
+			for (int dx = -neighborhoodSize; dx <= neighborhoodSize; dx++)
+			{
+				for (int dy = -neighborhoodSize; dy <= neighborhoodSize; dy++)
+				{
+					if ((dx == 0) && (dy == 0))
+						continue;
+					
+					Tile* neighbor = [map tileAt:MakeCoordinate(x + dx, y + dy)];
+					
+					if (neighbor.tileId == 1)
+						neighborCount++;
+				}
+			}
+			
+			neighborCounts[y * map.width + x] = neighborCount;
+		}
+	}
+
 	// Kill or spawn cells depending on neighbor count
-	[map iterateTilesUsingBlock:^(Tile *tile)
-	 {
-		 if ((tile.location.x < _neighborhoodSize) ||
-			 (tile.location.x >= (map.width - _neighborhoodSize)) ||
-			 (tile.location.y < _neighborhoodSize) ||
-			 (tile.location.y >= (map.height - _neighborhoodSize)))
-			 return;
-		 
-		 if (tile.builderData1 >= _threshold)
-			 tile.tileId = 0;
-		 else
-			 tile.tileId = 1;
-	 }];
+	for (int y = 0; y < map.height; y++)
+	{
+		for (int x = 0; x < map.width; x++)
+		{
+			Coordinate coordinate = MakeCoordinate(x, y);
+			
+			if (![map containsCoordinate:coordinate withinBand:neighborhoodSize])
+				continue;
+			
+			Tile* tile = [map tileAt:coordinate];
+			
+			if (neighborCounts[y * map.width + x] >= threshold)
+				tile.tileId = 1;
+			else
+				tile.tileId = 0;
+		}
+	}
 }
 
 - (void)enumerateSections
 {
-	__block NSUInteger nextSection = 0;
-	__block NSMutableArray* floodList = [[NSMutableArray alloc] init];
+	NSUInteger nextRoom = 0;
+	NSMutableArray* floodList = [[NSMutableArray alloc] init];
 	
-	[map iterateTilesUsingBlock:^(Tile *tile)
-	 {
-		 if ((tile.tileId == 0) || (tile.sectionId != 0))
-			 return;
-		 
-		 nextSection++;
-		 [floodList addObject:tile];
-		 
-		 while (floodList.count > 0)
-		 {
-			 Tile* thisTile;
-			 
-			 thisTile = [floodList objectAtIndex:0];
-			 [floodList removeObjectAtIndex:0];
-			 
-			 if ((thisTile.tileId == 0) || (thisTile.sectionId != 0))
-				 continue;
-			 
-			 thisTile.sectionId = nextSection;
-			 
-			 if (thisTile.location.x > 0)
-			 {
-				 Tile* leftNeighbor = [map tileAt:MakeCoordinate(thisTile.location.x - 1, thisTile.location.y)];
-				 [floodList addObject:leftNeighbor];
-			 }
-			 
-			 if (thisTile.location.x < (map.width - 1))
-			 {
-				 Tile* rightNeighbor = [map tileAt:MakeCoordinate(thisTile.location.x + 1, thisTile.location.y)];
-				 [floodList addObject:rightNeighbor];
-			 }
-			 
-			 if (thisTile.location.y > 0)
-			 {
-				 Tile* downNeighbor = [map tileAt:MakeCoordinate(thisTile.location.x, thisTile.location.y - 1)];
-				 [floodList addObject:downNeighbor];
-			 }
-			 
-			 if (thisTile.location.y < (map.height - 1))
-			 {
-				 Tile* upNeighbor = [map tileAt:MakeCoordinate(thisTile.location.x, thisTile.location.y + 1)];
-				 [floodList addObject:upNeighbor];
-			 }
-		 }
-	 }];
+	for (int y = 0; y < map.height; y++)
+	{
+		for (int x = 0; x < map.width; x++)
+		{
+			Coordinate coordinate = MakeCoordinate(x, y);
+			Tile* tile = [map tileAt:coordinate];
+			
+			if ((tile.tileId == 0) || (tile.roomId != 0))
+				continue;
+			
+			nextRoom++;
+			[floodList addObject:tile];
+			
+			while (floodList.count > 0)
+			{
+				Tile* thisTile;
+				
+				thisTile = [floodList lastObject];
+				[floodList removeLastObject];
+				
+				thisTile.roomId = nextRoom;
+				thisTile.tag = [NSString stringWithFormat:@"%ld", (unsigned long)thisTile.roomId];
+				
+				if (thisTile.coordinate.x > 0)
+				{
+					Tile* leftNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x - 1, thisTile.coordinate.y)];
+					
+					if ((leftNeighbor.tileId != 0) && (leftNeighbor.roomId == 0))
+						[floodList addObject:leftNeighbor];
+				}
+				
+				if (thisTile.coordinate.x < (map.width - 1))
+				{
+					Tile* rightNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x + 1, thisTile.coordinate.y)];
+					
+					if ((rightNeighbor.tileId != 0) && (rightNeighbor.roomId == 0))
+						[floodList addObject:rightNeighbor];
+				}
+				
+				if (thisTile.coordinate.y > 0)
+				{
+					Tile* downNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x, thisTile.coordinate.y - 1)];
+					
+					if ((downNeighbor.tileId != 0) && (downNeighbor.roomId == 0))
+						[floodList addObject:downNeighbor];
+				}
+				
+				if (thisTile.coordinate.y < (map.height - 1))
+				{
+					Tile* upNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x, thisTile.coordinate.y + 1)];
+					
+					if ((upNeighbor.tileId != 0) && (upNeighbor.roomId == 0))
+						[floodList addObject:upNeighbor];
+				}
+			}
+		}
+	}
 }
 
 @end

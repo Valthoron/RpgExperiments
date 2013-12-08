@@ -7,7 +7,6 @@
 //
 
 #import "Tile.h"
-#import "Tile+Builder.h"
 
 @implementation Tile
 
@@ -17,20 +16,10 @@
 	
 	if (self)
 	{
-		_location = MakeCoordinate(0, 0);
-		_sectionId = 0;
 		_tileId = 0;
-		_artId = 0;
 	}
 	
 	return self;
-}
-
-- (void)resetBuilderData
-{
-	_builderData1 = 0;
-	_builderData2 = 0;
-	_builderData3 = 0.f;
 }
 
 @end

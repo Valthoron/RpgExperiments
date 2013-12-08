@@ -10,10 +10,13 @@
 #import "Coordinate.h"
 
 @interface Tile : NSObject
+{
+	
+}
 
-@property (nonatomic) Coordinate location;
-@property (nonatomic) NSUInteger sectionId;
+@property (nonatomic) Coordinate coordinate;
 @property (nonatomic) NSUInteger tileId;
-@property (nonatomic) NSUInteger artId;
+@property (nonatomic) NSUInteger roomId;
+@property (nonatomic) NSString* tag;
 
 @end

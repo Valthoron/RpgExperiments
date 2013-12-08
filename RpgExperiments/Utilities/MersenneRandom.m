@@ -6,26 +6,47 @@
 //  Copyright (c) 2013 Serdar Üşenmez. All rights reserved.
 //
 
-#import "SeededRandomGenerator.h"
+#import "MersenneRandom.h"
 
-@implementation SeededRandomGenerator
+static MersenneRandom* _sharedInstance = nil;
 
-- (id)initWithSeed:(unsigned int)seed
+@implementation MersenneRandom
+
++ (MersenneRandom *)sharedInstance
+{
+	if (_sharedInstance == nil)
+		_sharedInstance = [[MersenneRandom alloc] init];
+	
+	return _sharedInstance;
+}
+
+- (id)init
 {
 	self = [super init];
 	
 	if (self)
 	{
-		index = 0;
-		MT[0] = seed;
-		
-		for (int i = 1; i < 624; i++)
-		{
-			MT[i] = 0x6c078965 * (MT[i - 1] ^ (MT[i - 1] >> 30)) + i; // 
-		}
+		[self setSeed:arc4random()];
 	}
 	
 	return self;
+}
+
+- (void)setSeed:(unsigned int)seed
+{
+	index = 0;
+	MT[0] = seed;
+	_seed = seed;
+	
+	for (int i = 1; i < 624; i++)
+	{
+		MT[i] = 0x6c078965 * (MT[i - 1] ^ (MT[i - 1] >> 30)) + i;
+	}
+}
+
+- (unsigned int)seed
+{
+	return _seed;
 }
 
 - (void)generateNumbers

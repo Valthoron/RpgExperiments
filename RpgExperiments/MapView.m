@@ -42,7 +42,7 @@
 		for (NSUInteger u = 0; u < map.width; u++)
 		{
 			Tile* tile = [map tileAt:MakeCoordinate(u, v)];
-			CGRect tileBounds = NSMakeRect(3 + (u * tileSize), 3 + (v * tileSize), tileSize, tileSize);
+			CGRect tileBounds = NSMakeRect(3 + (u * tileSize), 3 + ((map.height - v - 1) * tileSize), tileSize, tileSize);
 			
 			switch (tile.tileId)
 			{
@@ -72,10 +72,9 @@
 			
 			CGContextSetFillColorWithColor(ctx, [NSColor blackColor].CGColor);
 			
-			if (tile.sectionId != 0)
+			if (![tile.tag isEqualToString:@""])
 			{
-				NSString* sectionString = [NSString stringWithFormat:@"%ld", (unsigned long)tile.sectionId];
-				CGContextShowTextAtPoint(ctx, tileBounds.origin.x + 2, tileBounds.origin.y + 2, sectionString.UTF8String, sectionString.length);
+				CGContextShowTextAtPoint(ctx, tileBounds.origin.x + 2, tileBounds.origin.y + 2, [tile.tag UTF8String], tile.tag.length);
 			}
 			
 			CGContextStrokeRect(ctx, tileBounds);

@@ -8,16 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SeededRandomGenerator : NSObject
+@interface MersenneRandom : NSObject
 {
 	unsigned int MT[624];
 	unsigned int index;
+	unsigned int _seed;
 }
 
-- (id)initWithSeed:(unsigned int)seed;
+- (void)setSeed:(unsigned int)seed;
+- (unsigned int)seed;
 - (unsigned int)nextInt;
 - (unsigned int)nextUniformIntWithUpperBound:(unsigned int)upperBound;
 - (unsigned int)nextUniformIntWithUpperBound:(unsigned int)upperBound andLowerBound:(unsigned int)lowerBound;
 - (float)nextFloat;
+
++ (MersenneRandom*)sharedInstance;
 
 @end

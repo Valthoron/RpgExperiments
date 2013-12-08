@@ -8,19 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "Map.h"
-#import "Map+Builder.h"
-#import "SeededRandomGenerator.h"
+#import "MersenneRandom.h"
 
 @interface Builder : NSObject
 {
+	NSUInteger width;
+	NSUInteger height;
+	MersenneRandom* random;
+	NSMutableArray* parameters;
 	Map* map;
-	SeededRandomGenerator* random;
 }
 
-- (Map*)buildMapWithWidth:(NSUInteger)width andHeight:(NSUInteger)height;
-- (Map*)buildMapWithWidth:(NSUInteger)width andHeight:(NSUInteger)height usingSeed:(unsigned int)seed;
-- (void)buildMap;
-- (NSString*)getName;
-- (NSString*)getConfigurationHash;
+- (NSDictionary*)defaultConfiguration;
+- (Map*)buildMapWithWidth:(NSUInteger)mapWidth andHeight:(NSUInteger)mapHeight usingConfiguration:(NSDictionary*)configuration;
 
 @end

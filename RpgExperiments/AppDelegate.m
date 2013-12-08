@@ -10,27 +10,18 @@
 #import "Dice.h"
 #import "Map.h"
 #import "Builder.h"
-#import "CaveBuilder.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+	[self.window setFrame:[[NSScreen mainScreen] visibleFrame] display:YES];
+	
 	documentView = _scrollView.documentView;
 	[documentView setAutoresizingMask:NSViewNotSizable];
 	
 	mapView = [[MapView alloc] initWithFrame:documentView.frame];
 	[documentView addSubview:mapView];
-	
-	CaveBuilder* caveBuilder = [[CaveBuilder alloc] init];
-	//map = [caveBuilder buildMapWithWidth:140 andHeight:70];
-	map = [caveBuilder buildMapWithWidth:140 andHeight:70 usingSeed:0];
-	[mapView setMap:map];
-	
-	CGRect frame;
-	frame.origin = documentView.frame.origin;
-	frame.size = mapView.frame.size;
-	documentView.frame = frame;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication*)sender
@@ -40,31 +31,71 @@
 
 - (void)presentMapGenerateDialog:(id)sender
 {
+	mapGenerateDialog = [[MapGenerateDialogController alloc] init];
+	[NSApp beginSheet:mapGenerateDialog.window modalForWindow:self.window modalDelegate:self didEndSelector:@selector(mapGenerateDialogDidEnd) contextInfo:NULL];
+}
+
+-(void)mapGenerateDialogDidEnd
+{
+	[NSApp endSheet:mapGenerateDialog.window];
+	[mapGenerateDialog.window orderOut:self];
+	
+	if (mapGenerateDialog.result != nil)
+	{
+		generateParameters = mapGenerateDialog.result;
+		[self generateMap:nil];
+	}
+				
+	mapGenerateDialog = nil;
+}
+
+- (IBAction)generateMap:(id)sender
+{
+	if (generateParameters == nil)
+		return;
+	
+	Builder* builder = [generateParameters objectForKey:@"builder"];
+	NSUInteger width = [[generateParameters objectForKey:@"width"] unsignedIntegerValue];
+	NSUInteger height = [[generateParameters objectForKey:@"height"] unsignedIntegerValue];
+	NSDictionary* configuration = [generateParameters objectForKey:@"configuration"];
+	
+	map = [builder buildMapWithWidth:width andHeight:height usingConfiguration:configuration];
+	
+	[mapView setMap:map];
+	
+	CGRect frame;
+	frame.origin = documentView.frame.origin;
+	frame.size = mapView.frame.size;
+	documentView.frame = frame;
+}
+
+- (IBAction)refineMap:(id)sender
+{
 	
 }
 
 - (void)saveMapAsImage:(id)sender
 {
-	NSString* fileName = [NSString stringWithFormat:@"%@ %ld.png", map.builderName, (unsigned long)map.builderSeed];
-	NSString* details = [NSString stringWithFormat:@"%ld × %ld %@\nConfiguration: %@\nSeed: %ld", (unsigned long)map.width, (unsigned long)map.height, map.builderName, map.builderConfigurationHash, (unsigned long)map.builderSeed];
+	NSString* fileName = [NSString stringWithFormat:@"%@ %u.png", map.builderName, map.builderSeed];
+	NSString* details = [NSString stringWithFormat:@"%ld × %ld %@\nSeed:%u\nConfiguration: %@", (unsigned long)map.width, (unsigned long)map.height, map.builderName, map.builderSeed, [map.builderConfiguration debugDescription]];
 	
 	NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
-    NSString* documentsPath = [paths objectAtIndex:0];
-    NSString* filePath = [documentsPath stringByAppendingPathComponent:fileName];
+    NSString* desktopPath = [paths objectAtIndex:0];
+    NSString* filePath = [desktopPath stringByAppendingPathComponent:fileName];
 	
 	NSImage* image = [[NSImage alloc] initWithSize:mapView.frame.size];
 	NSRect imageRect = NSMakeRect(0, 0, image.size.width, image.size.height);
+	NSBitmapImageRep* imageRep = [mapView bitmapImageRepForCachingDisplayInRect:imageRect];
+	[mapView cacheDisplayInRect:imageRect toBitmapImageRep:imageRep];
 	
-	[image lockFocus];
-	[[NSColor controlBackgroundColor] set];
-	[NSBezierPath fillRect:imageRect];
-	[mapView drawRect:imageRect];
+	NSGraphicsContext* ctx = [NSGraphicsContext graphicsContextWithBitmapImageRep:imageRep];
+	[NSGraphicsContext saveGraphicsState];
+	[NSGraphicsContext setCurrentContext:ctx];
 	[details drawInRect:imageRect withAttributes:nil];
-	[image unlockFocus];
+	[ctx flushGraphics];
+	[NSGraphicsContext restoreGraphicsState];
 	
-	NSData* imageData = [image TIFFRepresentation];
-	NSBitmapImageRep* imageRep = [NSBitmapImageRep imageRepWithData:imageData];
-	imageData = [imageRep representationUsingType:NSPNGFileType properties:nil];
+	NSData* imageData = [imageRep representationUsingType:NSPNGFileType properties:nil];
     [imageData writeToFile:filePath atomically:YES];
 	
 	[[[NSSound alloc] initWithContentsOfFile:@"/System/Library/Components/CoreAudio.component/Contents/SharedSupport/SystemSounds/system/Grab.aif" byReference:NO] play];

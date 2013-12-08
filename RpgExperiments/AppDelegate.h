@@ -8,12 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MapView.h"
+#import "MapGenerateDialogController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 {
 	NSView* documentView;
 	MapView* mapView;
 	Map* map;
+	MapGenerateDialogController* mapGenerateDialog;
+	NSDictionary* generateParameters;
 }
 
 @property (assign) IBOutlet NSWindow *window;

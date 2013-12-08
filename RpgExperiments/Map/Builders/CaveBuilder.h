@@ -9,10 +9,13 @@
 #import "Builder.h"
 
 @interface CaveBuilder : Builder
-
-@property (nonatomic) float initialPopulation;
-@property (nonatomic) int threshold;
-@property (nonatomic) int neighborhoodSize;
-@property (nonatomic) int iterations;
+{
+	float initialPopulation;
+	int threshold;
+	int neighborhoodSize;
+	int iterations;
+	
+	int* neighborCounts;
+}
 
 @end

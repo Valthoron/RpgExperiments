@@ -7,6 +7,10 @@
 //
 
 #import "Builder.h"
+#import "Builder_Subclass.h"
+#import "BuilderParameter.h"
+
+NSMutableArray* registeredBuilders = nil;
 
 @implementation Builder
 
@@ -16,45 +20,86 @@
 	
     if (self)
 	{
+		random = [[MersenneRandom alloc] init];
+		parameters = [[NSMutableArray alloc] init];
     }
 	
     return self;
 }
 
-- (Map*)buildMapWithWidth:(NSUInteger)width andHeight:(NSUInteger)height
+- (NSString*)description
 {
-	return [self buildMapWithWidth:width andHeight:height usingSeed:arc4random()];
+	return [self.class description];
 }
 
-- (Map*)buildMapWithWidth:(NSUInteger)width andHeight:(NSUInteger)height usingSeed:(unsigned int)seed
+- (void)parseConfiguration:(NSDictionary *)configuration
 {
-	NSLog(@"%@ building map using seed: %u", [self className], seed);
+	id valueObject;
 	
-	random = [[SeededRandomGenerator alloc] initWithSeed:seed];
+	valueObject = [configuration objectForKey:@"seed"];
+	if (valueObject)
+		[random setSeed:(unsigned int)[valueObject longLongValue]];
+	
+	for (BuilderParameter* parameter in parameters)
+	{
+		valueObject = [configuration objectForKey:parameter.name];
+		
+		if (valueObject == nil)
+			valueObject = parameter.defaultValue;
+		
+		switch (parameter.type)
+		{
+			case kCFNumberIntType:
+				*(int*)(parameter.variable) = [valueObject intValue];
+				break;
+				
+			case kCFNumberFloatType:
+				*(float*)(parameter.variable) = [valueObject floatValue];
+				break;
+				
+			case kCFNumberCharType:
+				*(BOOL*)(parameter.variable) = [valueObject boolValue];
+				break;
+				
+			default:
+				break;
+		}
+	}
+}
+
+- (NSDictionary*)defaultConfiguration
+{
+	NSMutableDictionary* configuration = [[NSMutableDictionary alloc] init];
+	
+	for (BuilderParameter* parameter in parameters)
+		[configuration setObject:parameter.defaultValue forKey:parameter.name];
+	
+	return [configuration copy];
+}
+
+- (Map*)buildMapWithWidth:(NSUInteger)mapWidth andHeight:(NSUInteger)mapHeight usingConfiguration:(NSDictionary*)configuration
+{
+	width = mapWidth;
+	height = mapHeight;
+	
+	[self parseConfiguration:configuration];
+	
 	map = [[Map alloc] initWithWidth:width andHeight:height];
 	
 	[self buildMap];
 	
-	map.builderName = [self getName];
-	map.builderConfigurationHash = [self getConfigurationHash];
-	map.builderSeed = seed;
+	map.builderName = [self.class description];
+	map.builderConfiguration = [configuration copy];
+	map.builderSeed = random.seed;
 	
 	return map;
 }
 
 - (void)buildMap
 {
-	@throw [NSException exceptionWithName:@"NOT IMPLEMENTED" reason:@"Method not implemented." userInfo:nil];
-}
-
-- (NSString *)getName
-{
-	return [self className];
-}
-
-- (NSString*)getConfigurationHash
-{
-	return @"";
+	@throw [NSException exceptionWithName:NSInternalInconsistencyException
+								   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+								 userInfo:nil];
 }
 
 @end

@@ -7,33 +7,29 @@
 //
 
 #import "Map.h"
-#import "Map+Builder.h"
 
 @implementation Map
 
-- (id)initWithWidth:(NSUInteger)theWidth andHeight:(NSUInteger)theHeight
+- (id)initWithWidth:(NSUInteger)width andHeight:(NSUInteger)height
 {
 	self = [super init];
 	
 	if (self)
 	{
-		_width = theWidth;
-		_height = theHeight;
+		_width = width;
+		_height = height;
 		
-		NSMutableArray* tileArray = [[NSMutableArray alloc] init];
-		NSUInteger tileCount = _width * _height;
+		NSUInteger tileCount = width * height;
+		NSMutableArray* mutableTiles = [[NSMutableArray alloc] initWithCapacity:(tileCount)];
 		
-		for (NSUInteger i = 0; i < tileCount; i++)
+		for (int i = 0; i < tileCount; i++)
 		{
-			NSUInteger x = i % _width;
-			NSUInteger y = i / _width;
-			
 			Tile* tile = [[Tile alloc] init];
-			tile.location = MakeCoordinate(x, y);
-			[tileArray addObject:tile];
+			tile.coordinate = MakeCoordinate(i % width, i / width);
+			[mutableTiles addObject:tile];
 		}
 		
-		tiles = [NSArray arrayWithArray:tileArray];
+		tiles = [mutableTiles copy];
 	}
 	
 	return self;
@@ -41,16 +37,42 @@
 
 - (Tile*)tileAt:(Coordinate)coordinate
 {
+	if (coordinate.x > _width)
+		@throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"x coordinate out of bounds" userInfo:nil];
+	
+	if (coordinate.y > _height)
+		@throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"y coordinate out of bounds" userInfo:nil];
+	
 	NSUInteger tileIndex = (coordinate.y * _width) + coordinate.x;
 	return [tiles objectAtIndex:tileIndex];
 }
 
-- (void)iterateTilesUsingBlock:(void (^)(Tile *))block
+- (BOOL)containsCoordinate:(Coordinate)coordinate
 {
-	for (NSUInteger i = 0; i < tiles.count; i++)
-	{
-		block((Tile*)[tiles objectAtIndex:i]);
-	}
+	if (coordinate.x >= _width)
+		return NO;
+	
+	if (coordinate.y >= _height)
+		return  NO;
+	
+	return YES;
+}
+
+- (BOOL)containsCoordinate:(Coordinate)coordinate withinBand:(NSUInteger)band
+{
+	if (coordinate.x < band)
+		return NO;
+	
+	if (coordinate.x >= _width - band)
+		return NO;
+	
+	if (coordinate.y < band)
+		return NO;
+	
+	if (coordinate.y >= _height - band)
+		return NO;
+	
+	return YES;
 }
 
 @end

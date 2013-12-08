@@ -57,15 +57,23 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Map" id="581">
                         <items>
-                            <menuItem title="Generate..." id="583">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                            <menuItem title="Generate..." keyEquivalent="g" id="583">
                                 <connections>
                                     <action selector="presentMapGenerateDialog:" target="494" id="586"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Regenerate" keyEquivalent="G" id="3XW-Vn-CW9">
+                                <connections>
+                                    <action selector="generateMap:" target="494" id="f6r-Oe-KZO"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Refine" enabled="NO" keyEquivalent="r" id="vvM-0h-SfD">
+                                <connections>
+                                    <action selector="refineMap:" target="494" id="TGL-xi-8jF"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="584"/>
-                            <menuItem title="Save as Image" id="585">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                            <menuItem title="Save as Image" keyEquivalent="s" id="585">
                                 <connections>
                                     <action selector="saveMapAsImage:" target="494" id="587"/>
                                 </connections>

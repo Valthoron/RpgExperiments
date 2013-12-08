@@ -11,7 +11,8 @@
 
 typedef struct
 {
-	NSUInteger x, y;
+	NSInteger x, y;
 } Coordinate;
 
 Coordinate MakeCoordinate(NSUInteger x, NSUInteger y);
+NSComparisonResult CompareCoordinates(Coordinate c1, Coordinate c2);

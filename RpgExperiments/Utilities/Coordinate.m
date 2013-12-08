@@ -15,3 +15,20 @@ Coordinate MakeCoordinate(NSUInteger x, NSUInteger y)
 	c.y = y;
 	return c;
 }
+
+NSComparisonResult CompareCoordinates(Coordinate c1, Coordinate c2)
+{
+	if (c1.y < c2.y)
+		return NSOrderedDescending;
+	else if (c1.y > c2.y)
+		return NSOrderedAscending;
+	else
+	{
+		if (c1.x < c2.x)
+			return NSOrderedDescending;
+		else if (c1.x > c2.x)
+			return NSOrderedAscending;
+		else
+			return NSOrderedSame;
+	}
+}

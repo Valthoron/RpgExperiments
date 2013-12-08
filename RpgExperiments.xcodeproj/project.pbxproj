@@ -22,13 +22,18 @@
 		756F0AE517342A4A008D007B /* NSValue+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE417342A4A008D007B /* NSValue+Coordinate.m */; };
 		756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE717342AE8008D007B /* NSValue+Vector.m */; };
 		75BAB0D21847818400F9CB65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BAB0D11847818400F9CB65 /* QuartzCore.framework */; };
-		75C16F9517311AB900074D0F /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9117311AB900074D0F /* Tile.m */; };
+		75BE6F9B185495CB0014FD75 /* BuilderParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BE6F9A185495CB0014FD75 /* BuilderParameter.m */; };
+		75BE6F9E1854CE7F0014FD75 /* Maplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BE6F9D1854CE7F0014FD75 /* Maplet.m */; };
+		75C077351848CFF700489C13 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C077341848CFF700489C13 /* Tile.m */; };
 		75C16F9617311AB900074D0F /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9417311AB900074D0F /* Map.m */; };
 		75C16F9917311AF500074D0F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9817311AF500074D0F /* MapView.m */; };
 		75C16F9C173162A400074D0F /* Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9B173162A400074D0F /* Builder.m */; };
 		75C16FA01731667E00074D0F /* CaveBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9F1731667E00074D0F /* CaveBuilder.m */; };
 		75C16FA3173166AA00074D0F /* DungeonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16FA2173166AA00074D0F /* DungeonBuilder.m */; };
-		75C16FAA1731871400074D0F /* SeededRandomGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16FA91731871400074D0F /* SeededRandomGenerator.m */; };
+		75C16FAA1731871400074D0F /* MersenneRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16FA91731871400074D0F /* MersenneRandom.m */; };
+		75E9C1D81851BEF6008730CC /* MapGenerateDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E9C1D71851BEF6008730CC /* MapGenerateDialog.xib */; };
+		75E9C1DB1851C4D2008730CC /* MapGenerateDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9C1DA1851C4D2008730CC /* MapGenerateDialogController.m */; };
+		75E9C1DE185205E7008730CC /* MapGenerateDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9C1DD185205E7008730CC /* MapGenerateDialog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,15 +62,18 @@
 		7507C8F0172F047D0042FB66 /* Vector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
 		7535DA72173FDBFE000C193D /* QuestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestNode.h; path = Grammar/QuestNode.h; sourceTree = "<group>"; };
 		7535DA73173FDBFE000C193D /* QuestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestNode.m; path = Grammar/QuestNode.m; sourceTree = "<group>"; };
-		75650CA31738EB82002C9264 /* Tile+Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tile+Builder.h"; sourceTree = "<group>"; };
 		756F0AE317342A4A008D007B /* NSValue+Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Coordinate.h"; sourceTree = "<group>"; };
 		756F0AE417342A4A008D007B /* NSValue+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Coordinate.m"; sourceTree = "<group>"; };
 		756F0AE617342AE8008D007B /* NSValue+Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Vector.h"; sourceTree = "<group>"; };
 		756F0AE717342AE8008D007B /* NSValue+Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Vector.m"; sourceTree = "<group>"; };
 		75BAB0CF184780BE00F9CB65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75BAB0D11847818400F9CB65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		75C16F9017311AB900074D0F /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
-		75C16F9117311AB900074D0F /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		75BE6F99185495CB0014FD75 /* BuilderParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuilderParameter.h; sourceTree = "<group>"; };
+		75BE6F9A185495CB0014FD75 /* BuilderParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuilderParameter.m; sourceTree = "<group>"; };
+		75BE6F9C1854CE7F0014FD75 /* Maplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maplet.h; sourceTree = "<group>"; };
+		75BE6F9D1854CE7F0014FD75 /* Maplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maplet.m; sourceTree = "<group>"; };
+		75C077331848CFF700489C13 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		75C077341848CFF700489C13 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		75C16F9317311AB900074D0F /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		75C16F9417311AB900074D0F /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 		75C16F9717311AF500074D0F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
@@ -76,9 +84,14 @@
 		75C16F9F1731667E00074D0F /* CaveBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaveBuilder.m; path = Builders/CaveBuilder.m; sourceTree = "<group>"; };
 		75C16FA1173166AA00074D0F /* DungeonBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DungeonBuilder.h; sourceTree = "<group>"; };
 		75C16FA2173166AA00074D0F /* DungeonBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DungeonBuilder.m; sourceTree = "<group>"; };
-		75C16FA417316A7C00074D0F /* Map+Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Map+Builder.h"; sourceTree = "<group>"; };
-		75C16FA81731871400074D0F /* SeededRandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeededRandomGenerator.h; sourceTree = "<group>"; };
-		75C16FA91731871400074D0F /* SeededRandomGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeededRandomGenerator.m; sourceTree = "<group>"; };
+		75C16FA81731871400074D0F /* MersenneRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MersenneRandom.h; sourceTree = "<group>"; };
+		75C16FA91731871400074D0F /* MersenneRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MersenneRandom.m; sourceTree = "<group>"; };
+		75E9C1D71851BEF6008730CC /* MapGenerateDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapGenerateDialog.xib; sourceTree = "<group>"; };
+		75E9C1D91851C4D2008730CC /* MapGenerateDialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGenerateDialogController.h; sourceTree = "<group>"; };
+		75E9C1DA1851C4D2008730CC /* MapGenerateDialogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGenerateDialogController.m; sourceTree = "<group>"; };
+		75E9C1DC185205E7008730CC /* MapGenerateDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGenerateDialog.h; sourceTree = "<group>"; };
+		75E9C1DD185205E7008730CC /* MapGenerateDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGenerateDialog.m; sourceTree = "<group>"; };
+		75E9C1DF1854767E008730CC /* Builder_Subclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Builder_Subclass.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +151,11 @@
 				7507C8D5172EDE320042FB66 /* AppDelegate.h */,
 				7507C8D6172EDE320042FB66 /* AppDelegate.m */,
 				7507C8D8172EDE320042FB66 /* MainMenu.xib */,
+				75E9C1DC185205E7008730CC /* MapGenerateDialog.h */,
+				75E9C1DD185205E7008730CC /* MapGenerateDialog.m */,
+				75E9C1D71851BEF6008730CC /* MapGenerateDialog.xib */,
+				75E9C1D91851C4D2008730CC /* MapGenerateDialogController.h */,
+				75E9C1DA1851C4D2008730CC /* MapGenerateDialogController.m */,
 				75C16F9717311AF500074D0F /* MapView.h */,
 				75C16F9817311AF500074D0F /* MapView.m */,
 				7507C8E0172F047D0042FB66 /* Dice */,
@@ -183,8 +201,8 @@
 				756F0AE417342A4A008D007B /* NSValue+Coordinate.m */,
 				756F0AE617342AE8008D007B /* NSValue+Vector.h */,
 				756F0AE717342AE8008D007B /* NSValue+Vector.m */,
-				75C16FA81731871400074D0F /* SeededRandomGenerator.h */,
-				75C16FA91731871400074D0F /* SeededRandomGenerator.m */,
+				75C16FA81731871400074D0F /* MersenneRandom.h */,
+				75C16FA91731871400074D0F /* MersenneRandom.m */,
 				7507C8EF172F047D0042FB66 /* Vector.h */,
 				7507C8F0172F047D0042FB66 /* Vector.m */,
 			);
@@ -205,12 +223,15 @@
 			children = (
 				75C16F9A173162A400074D0F /* Builder.h */,
 				75C16F9B173162A400074D0F /* Builder.m */,
-				75C16F9017311AB900074D0F /* Tile.h */,
-				75C16F9117311AB900074D0F /* Tile.m */,
-				75650CA31738EB82002C9264 /* Tile+Builder.h */,
+				75E9C1DF1854767E008730CC /* Builder_Subclass.h */,
+				75BE6F99185495CB0014FD75 /* BuilderParameter.h */,
+				75BE6F9A185495CB0014FD75 /* BuilderParameter.m */,
 				75C16F9317311AB900074D0F /* Map.h */,
 				75C16F9417311AB900074D0F /* Map.m */,
-				75C16FA417316A7C00074D0F /* Map+Builder.h */,
+				75BE6F9C1854CE7F0014FD75 /* Maplet.h */,
+				75BE6F9D1854CE7F0014FD75 /* Maplet.m */,
+				75C077331848CFF700489C13 /* Tile.h */,
+				75C077341848CFF700489C13 /* Tile.m */,
 				75C16F9D1731666400074D0F /* Builders */,
 			);
 			path = Map;
@@ -281,6 +302,7 @@
 				7507C8CE172EDE320042FB66 /* InfoPlist.strings in Resources */,
 				7507C8D4172EDE320042FB66 /* Credits.rtf in Resources */,
 				7507C8DA172EDE320042FB66 /* MainMenu.xib in Resources */,
+				75E9C1D81851BEF6008730CC /* MapGenerateDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,15 +318,19 @@
 				7507C8F4172F05370042FB66 /* Dice.m in Sources */,
 				7507C8F5172F05370042FB66 /* DiceNotationTerm.m in Sources */,
 				7507C8F6172F05370042FB66 /* DiceNotationTermStack.m in Sources */,
+				75BE6F9B185495CB0014FD75 /* BuilderParameter.m in Sources */,
 				7507C8D0172EDE320042FB66 /* main.m in Sources */,
 				7507C8F8172F05370042FB66 /* Vector.m in Sources */,
-				75C16F9517311AB900074D0F /* Tile.m in Sources */,
+				75C077351848CFF700489C13 /* Tile.m in Sources */,
 				75C16F9617311AB900074D0F /* Map.m in Sources */,
 				75C16F9917311AF500074D0F /* MapView.m in Sources */,
 				75C16F9C173162A400074D0F /* Builder.m in Sources */,
+				75E9C1DE185205E7008730CC /* MapGenerateDialog.m in Sources */,
 				75C16FA01731667E00074D0F /* CaveBuilder.m in Sources */,
 				75C16FA3173166AA00074D0F /* DungeonBuilder.m in Sources */,
-				75C16FAA1731871400074D0F /* SeededRandomGenerator.m in Sources */,
+				75E9C1DB1851C4D2008730CC /* MapGenerateDialogController.m in Sources */,
+				75C16FAA1731871400074D0F /* MersenneRandom.m in Sources */,
+				75BE6F9E1854CE7F0014FD75 /* Maplet.m in Sources */,
 				756F0AE517342A4A008D007B /* NSValue+Coordinate.m in Sources */,
 				756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */,
 				7535DA74173FDBFE000C193D /* QuestNode.m in Sources */,

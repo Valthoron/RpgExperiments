@@ -7,6 +7,7 @@
 //
 
 #import "DungeonBuilder.h"
+#import "Builder_Subclass.h"
 
 @implementation DungeonBuilder
 
