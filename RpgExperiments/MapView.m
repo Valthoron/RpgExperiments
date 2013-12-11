@@ -41,7 +41,7 @@
 	{
 		for (NSUInteger u = 0; u < map.width; u++)
 		{
-			Tile* tile = [map tileAt:MakeCoordinate(u, v)];
+			Tile* tile = [map tileAt:MakeVector(u, v)];
 			CGRect tileBounds = NSMakeRect(3 + (u * tileSize), 3 + ((map.height - v - 1) * tileSize), tileSize, tileSize);
 			
 			switch (tile.tileId)

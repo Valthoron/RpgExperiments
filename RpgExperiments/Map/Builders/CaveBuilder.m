@@ -47,7 +47,7 @@
 	{
 		for (int x = 0; x < map.width; x++)
 		{
-			Coordinate coordinate = MakeCoordinate(x, y);
+			Vector coordinate = MakeVector(x, y);
 			
 			Tile* tile = [map tileAt:coordinate];
 			
@@ -69,7 +69,7 @@
 	{
 		for (int x = 0; x < map.width; x++)
 		{
-			Coordinate coordinate = MakeCoordinate(x, y);
+			Vector coordinate = MakeVector(x, y);
 			
 			if (![map containsCoordinate:coordinate withinBand:neighborhoodSize])
 				continue;
@@ -83,7 +83,7 @@
 					if ((dx == 0) && (dy == 0))
 						continue;
 					
-					Tile* neighbor = [map tileAt:MakeCoordinate(x + dx, y + dy)];
+					Tile* neighbor = [map tileAt:MakeVector(x + dx, y + dy)];
 					
 					if (neighbor.tileId == 1)
 						neighborCount++;
@@ -99,7 +99,7 @@
 	{
 		for (int x = 0; x < map.width; x++)
 		{
-			Coordinate coordinate = MakeCoordinate(x, y);
+			Vector coordinate = MakeVector(x, y);
 			
 			if (![map containsCoordinate:coordinate withinBand:neighborhoodSize])
 				continue;
@@ -123,7 +123,7 @@
 	{
 		for (int x = 0; x < map.width; x++)
 		{
-			Coordinate coordinate = MakeCoordinate(x, y);
+			Vector coordinate = MakeVector(x, y);
 			Tile* tile = [map tileAt:coordinate];
 			
 			if ((tile.tileId == 0) || (tile.roomId != 0))
@@ -144,7 +144,7 @@
 				
 				if (thisTile.coordinate.x > 0)
 				{
-					Tile* leftNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x - 1, thisTile.coordinate.y)];
+					Tile* leftNeighbor = [map tileAt:MakeVector(thisTile.coordinate.x - 1, thisTile.coordinate.y)];
 					
 					if ((leftNeighbor.tileId != 0) && (leftNeighbor.roomId == 0))
 						[floodList addObject:leftNeighbor];
@@ -152,7 +152,7 @@
 				
 				if (thisTile.coordinate.x < (map.width - 1))
 				{
-					Tile* rightNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x + 1, thisTile.coordinate.y)];
+					Tile* rightNeighbor = [map tileAt:MakeVector(thisTile.coordinate.x + 1, thisTile.coordinate.y)];
 					
 					if ((rightNeighbor.tileId != 0) && (rightNeighbor.roomId == 0))
 						[floodList addObject:rightNeighbor];
@@ -160,7 +160,7 @@
 				
 				if (thisTile.coordinate.y > 0)
 				{
-					Tile* downNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x, thisTile.coordinate.y - 1)];
+					Tile* downNeighbor = [map tileAt:MakeVector(thisTile.coordinate.x, thisTile.coordinate.y - 1)];
 					
 					if ((downNeighbor.tileId != 0) && (downNeighbor.roomId == 0))
 						[floodList addObject:downNeighbor];
@@ -168,7 +168,7 @@
 				
 				if (thisTile.coordinate.y < (map.height - 1))
 				{
-					Tile* upNeighbor = [map tileAt:MakeCoordinate(thisTile.coordinate.x, thisTile.coordinate.y + 1)];
+					Tile* upNeighbor = [map tileAt:MakeVector(thisTile.coordinate.x, thisTile.coordinate.y + 1)];
 					
 					if ((upNeighbor.tileId != 0) && (upNeighbor.roomId == 0))
 						[floodList addObject:upNeighbor];

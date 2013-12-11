@@ -16,14 +16,12 @@
 		7507C8F4172F05370042FB66 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E2172F047D0042FB66 /* Dice.m */; };
 		7507C8F5172F05370042FB66 /* DiceNotationTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */; };
 		7507C8F6172F05370042FB66 /* DiceNotationTermStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */; };
-		7507C8F7172F05370042FB66 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8EE172F047D0042FB66 /* Coordinate.m */; };
-		7507C8F8172F05370042FB66 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8F0172F047D0042FB66 /* Vector.m */; };
 		7535DA74173FDBFE000C193D /* QuestNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535DA73173FDBFE000C193D /* QuestNode.m */; };
-		756F0AE517342A4A008D007B /* NSValue+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE417342A4A008D007B /* NSValue+Coordinate.m */; };
 		756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE717342AE8008D007B /* NSValue+Vector.m */; };
+		75B0FCE618563436008137C2 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8F0172F047D0042FB66 /* Vector.m */; };
+		75B0FCEA18572D8B008137C2 /* Directions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B0FCE918572D8B008137C2 /* Directions.m */; };
 		75BAB0D21847818400F9CB65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BAB0D11847818400F9CB65 /* QuartzCore.framework */; };
 		75BE6F9B185495CB0014FD75 /* BuilderParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BE6F9A185495CB0014FD75 /* BuilderParameter.m */; };
-		75BE6F9E1854CE7F0014FD75 /* Maplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BE6F9D1854CE7F0014FD75 /* Maplet.m */; };
 		75C077351848CFF700489C13 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C077341848CFF700489C13 /* Tile.m */; };
 		75C16F9617311AB900074D0F /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9417311AB900074D0F /* Map.m */; };
 		75C16F9917311AF500074D0F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9817311AF500074D0F /* MapView.m */; };
@@ -56,22 +54,19 @@
 		7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiceNotationTerm.m; sourceTree = "<group>"; };
 		7507C8E5172F047D0042FB66 /* DiceNotationTermStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiceNotationTermStack.h; sourceTree = "<group>"; };
 		7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiceNotationTermStack.m; sourceTree = "<group>"; };
-		7507C8ED172F047D0042FB66 /* Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
-		7507C8EE172F047D0042FB66 /* Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
 		7507C8EF172F047D0042FB66 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		7507C8F0172F047D0042FB66 /* Vector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
 		7535DA72173FDBFE000C193D /* QuestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestNode.h; path = Grammar/QuestNode.h; sourceTree = "<group>"; };
 		7535DA73173FDBFE000C193D /* QuestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestNode.m; path = Grammar/QuestNode.m; sourceTree = "<group>"; };
-		756F0AE317342A4A008D007B /* NSValue+Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Coordinate.h"; sourceTree = "<group>"; };
-		756F0AE417342A4A008D007B /* NSValue+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Coordinate.m"; sourceTree = "<group>"; };
 		756F0AE617342AE8008D007B /* NSValue+Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Vector.h"; sourceTree = "<group>"; };
 		756F0AE717342AE8008D007B /* NSValue+Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Vector.m"; sourceTree = "<group>"; };
+		75B0FCE71856360C008137C2 /* Directions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Directions.h; sourceTree = "<group>"; };
+		75B0FCE818572C9A008137C2 /* Anchor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Anchor.h; sourceTree = "<group>"; };
+		75B0FCE918572D8B008137C2 /* Directions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Directions.m; sourceTree = "<group>"; };
 		75BAB0CF184780BE00F9CB65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75BAB0D11847818400F9CB65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		75BE6F99185495CB0014FD75 /* BuilderParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuilderParameter.h; sourceTree = "<group>"; };
 		75BE6F9A185495CB0014FD75 /* BuilderParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuilderParameter.m; sourceTree = "<group>"; };
-		75BE6F9C1854CE7F0014FD75 /* Maplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maplet.h; sourceTree = "<group>"; };
-		75BE6F9D1854CE7F0014FD75 /* Maplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maplet.m; sourceTree = "<group>"; };
 		75C077331848CFF700489C13 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		75C077341848CFF700489C13 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		75C16F9317311AB900074D0F /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
@@ -195,10 +190,8 @@
 		7507C8EC172F047D0042FB66 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				7507C8ED172F047D0042FB66 /* Coordinate.h */,
-				7507C8EE172F047D0042FB66 /* Coordinate.m */,
-				756F0AE317342A4A008D007B /* NSValue+Coordinate.h */,
-				756F0AE417342A4A008D007B /* NSValue+Coordinate.m */,
+				75B0FCE71856360C008137C2 /* Directions.h */,
+				75B0FCE918572D8B008137C2 /* Directions.m */,
 				756F0AE617342AE8008D007B /* NSValue+Vector.h */,
 				756F0AE717342AE8008D007B /* NSValue+Vector.m */,
 				75C16FA81731871400074D0F /* MersenneRandom.h */,
@@ -221,6 +214,7 @@
 		75C16F8F17311AB900074D0F /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				75B0FCE818572C9A008137C2 /* Anchor.h */,
 				75C16F9A173162A400074D0F /* Builder.h */,
 				75C16F9B173162A400074D0F /* Builder.m */,
 				75E9C1DF1854767E008730CC /* Builder_Subclass.h */,
@@ -228,8 +222,6 @@
 				75BE6F9A185495CB0014FD75 /* BuilderParameter.m */,
 				75C16F9317311AB900074D0F /* Map.h */,
 				75C16F9417311AB900074D0F /* Map.m */,
-				75BE6F9C1854CE7F0014FD75 /* Maplet.h */,
-				75BE6F9D1854CE7F0014FD75 /* Maplet.m */,
 				75C077331848CFF700489C13 /* Tile.h */,
 				75C077341848CFF700489C13 /* Tile.m */,
 				75C16F9D1731666400074D0F /* Builders */,
@@ -314,13 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7507C8D7172EDE320042FB66 /* AppDelegate.m in Sources */,
-				7507C8F7172F05370042FB66 /* Coordinate.m in Sources */,
 				7507C8F4172F05370042FB66 /* Dice.m in Sources */,
 				7507C8F5172F05370042FB66 /* DiceNotationTerm.m in Sources */,
 				7507C8F6172F05370042FB66 /* DiceNotationTermStack.m in Sources */,
 				75BE6F9B185495CB0014FD75 /* BuilderParameter.m in Sources */,
 				7507C8D0172EDE320042FB66 /* main.m in Sources */,
-				7507C8F8172F05370042FB66 /* Vector.m in Sources */,
+				75B0FCE618563436008137C2 /* Vector.m in Sources */,
+				75B0FCEA18572D8B008137C2 /* Directions.m in Sources */,
 				75C077351848CFF700489C13 /* Tile.m in Sources */,
 				75C16F9617311AB900074D0F /* Map.m in Sources */,
 				75C16F9917311AF500074D0F /* MapView.m in Sources */,
@@ -330,8 +322,6 @@
 				75C16FA3173166AA00074D0F /* DungeonBuilder.m in Sources */,
 				75E9C1DB1851C4D2008730CC /* MapGenerateDialogController.m in Sources */,
 				75C16FAA1731871400074D0F /* MersenneRandom.m in Sources */,
-				75BE6F9E1854CE7F0014FD75 /* Maplet.m in Sources */,
-				756F0AE517342A4A008D007B /* NSValue+Coordinate.m in Sources */,
 				756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */,
 				7535DA74173FDBFE000C193D /* QuestNode.m in Sources */,
 			);

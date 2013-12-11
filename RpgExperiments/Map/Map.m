@@ -10,9 +10,24 @@
 
 @implementation Map
 
+- (id)init
+{
+    self = [super init];
+	
+    if (self)
+	{
+		_width = 0;
+		_height = 0;
+        _metadata = [[NSMutableDictionary alloc] init];
+		tiles = [[NSMutableArray alloc] init];
+    }
+	
+    return self;
+}
+
 - (id)initWithWidth:(NSUInteger)width andHeight:(NSUInteger)height
 {
-	self = [super init];
+	self = [self init];
 	
 	if (self)
 	{
@@ -20,22 +35,19 @@
 		_height = height;
 		
 		NSUInteger tileCount = width * height;
-		NSMutableArray* mutableTiles = [[NSMutableArray alloc] initWithCapacity:(tileCount)];
 		
 		for (int i = 0; i < tileCount; i++)
 		{
 			Tile* tile = [[Tile alloc] init];
-			tile.coordinate = MakeCoordinate(i % width, i / width);
-			[mutableTiles addObject:tile];
+			tile.coordinate = MakeVector(i % width, i / width);
+			[tiles addObject:tile];
 		}
-		
-		tiles = [mutableTiles copy];
 	}
 	
 	return self;
 }
 
-- (Tile*)tileAt:(Coordinate)coordinate
+- (Tile*)tileAt:(Vector)coordinate
 {
 	if (coordinate.x > _width)
 		@throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"x coordinate out of bounds" userInfo:nil];
@@ -47,7 +59,7 @@
 	return [tiles objectAtIndex:tileIndex];
 }
 
-- (BOOL)containsCoordinate:(Coordinate)coordinate
+- (BOOL)containsCoordinate:(Vector)coordinate
 {
 	if (coordinate.x >= _width)
 		return NO;
@@ -58,7 +70,7 @@
 	return YES;
 }
 
-- (BOOL)containsCoordinate:(Coordinate)coordinate withinBand:(NSUInteger)band
+- (BOOL)containsCoordinate:(Vector)coordinate withinBand:(NSUInteger)band
 {
 	if (coordinate.x < band)
 		return NO;

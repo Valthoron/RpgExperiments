@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Coordinate.h"
+#import "Vector.h"
 
 @interface Tile : NSObject
 {
 	
 }
 
-@property (nonatomic) Coordinate coordinate;
+@property (nonatomic) Vector coordinate;
 @property (nonatomic) NSUInteger tileId;
 @property (nonatomic) NSUInteger roomId;
 @property (nonatomic) NSString* tag;

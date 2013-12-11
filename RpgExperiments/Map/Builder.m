@@ -88,9 +88,9 @@ NSMutableArray* registeredBuilders = nil;
 	
 	[self buildMap];
 	
-	map.builderName = [self.class description];
-	map.builderConfiguration = [configuration copy];
-	map.builderSeed = random.seed;
+	[map.metadata setObject:[self.class description] forKey:@"builderName"];
+	[map.metadata setObject:[NSNumber numberWithUnsignedInt:random.seed] forKey:@"builderSeed"];
+	[map.metadata setObject:[configuration copy] forKey:@"builderConfiguration"];
 	
 	return map;
 }

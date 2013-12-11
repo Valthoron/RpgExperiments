@@ -7,23 +7,34 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Coordinate.h"
+#import "Vector.h"
 #import "Tile.h"
+#import "Directions.h"
+#import "Anchor.h"
 
 @interface Map : NSObject
 {
-	NSArray* tiles;
+	NSMutableArray* tiles;
+	Anchor anchor;
+	NSMutableArray* openAnchors;
 }
 
 @property (nonatomic, readonly) NSUInteger width;
 @property (nonatomic, readonly) NSUInteger height;
-@property (nonatomic, readwrite) NSString* builderName;
-@property (nonatomic, readwrite) NSDictionary* builderConfiguration;
-@property (nonatomic, readwrite) unsigned int builderSeed;
+@property (nonatomic, readonly) NSMutableDictionary* metadata;
 
 - (id)initWithWidth:(NSUInteger)width andHeight:(NSUInteger)height;
-- (Tile*)tileAt:(Coordinate)coordinate;
-- (BOOL)containsCoordinate:(Coordinate)coordinate;
-- (BOOL)containsCoordinate:(Coordinate)coordinate withinBand:(NSUInteger)band;
+
+- (Tile*)tileAt:(Vector)coordinate;
+- (void)addTile:(Tile*)tile;
+- (void)removeTileAt:(Vector)coordinate;
+
+- (void)placeMapAt:(Anchor)openAnchor;
+
+- (BOOL)containsCoordinate:(Vector)coordinate;
+- (BOOL)containsCoordinate:(Vector)coordinate withinBand:(NSUInteger)band;
+
+- (void)rotate:(Rotation)direction;
+- (void)realignOrigin;
 
 @end

@@ -76,8 +76,11 @@
 
 - (void)saveMapAsImage:(id)sender
 {
-	NSString* fileName = [NSString stringWithFormat:@"%@ %u.png", map.builderName, map.builderSeed];
-	NSString* details = [NSString stringWithFormat:@"%ld × %ld %@\nSeed:%u\nConfiguration: %@", (unsigned long)map.width, (unsigned long)map.height, map.builderName, map.builderSeed, [map.builderConfiguration debugDescription]];
+	NSString* builderName = [map.metadata objectForKey:@"builderName"];
+	NSString* builderSeed = [[map.metadata objectForKey:@"builderSeed"] stringValue];
+	NSString* fileName = [NSString stringWithFormat:@"%@ %@.png", builderName, builderSeed];
+	
+	NSString* details = [NSString stringWithFormat:@"%ld × %ld\n%@", (unsigned long)map.width, (unsigned long)map.height, [map.metadata debugDescription]];
 	
 	NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
     NSString* desktopPath = [paths objectAtIndex:0];
