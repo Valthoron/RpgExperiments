@@ -27,7 +27,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2013 Serdar Üşenmez. All rights reserved.</string>
 	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<string>MainView</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

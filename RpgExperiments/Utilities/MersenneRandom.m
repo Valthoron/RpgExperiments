@@ -26,10 +26,15 @@ static MersenneRandom* _sharedInstance = nil;
 	
 	if (self)
 	{
-		[self setSeed:arc4random()];
+		[self reseed];
 	}
 	
 	return self;
+}
+
+- (void)reseed
+{
+	[self setSeed:arc4random()];
 }
 
 - (void)setSeed:(unsigned int)seed

@@ -10,13 +10,20 @@
 
 @implementation Tile
 
++ (Tile*)tileWithType:(NSUInteger)type
+{
+	Tile* tile = [[Tile alloc] init];
+	tile.type = type;
+	return tile;
+}
+
 - (id)init
 {
 	self = [super init];
 	
 	if (self)
 	{
-		_tileId = 0;
+		_type = 0;
 	}
 	
 	return self;

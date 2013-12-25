@@ -15,6 +15,7 @@
 	unsigned int _seed;
 }
 
+- (void)reseed;
 - (void)setSeed:(unsigned int)seed;
 - (unsigned int)seed;
 - (unsigned int)nextInt;

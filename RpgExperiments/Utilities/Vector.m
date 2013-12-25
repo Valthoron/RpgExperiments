@@ -99,13 +99,13 @@ Vector VectorRotate(Vector v, Rotation r)
 {
 	switch (r)
 	{
-		case Clockwise_90:
+		case RotationClockwise90:
 			return MakeVector(v.y, -v.x);
 			
-		case Clockwise_180:
+		case RotationClockwise180:
 			return MakeVector(-v.x, -v.y);
 			
-		case CounterClockwise_90:
+		case RotationCounterClockwise90:
 			return MakeVector(-v.y, v.x);
 			
 		default:
@@ -113,7 +113,7 @@ Vector VectorRotate(Vector v, Rotation r)
 	}
 }
 
-inline Vector VectorRotateAround(Vector v, Vector pivot, Rotation r)
+Vector VectorRotateAround(Vector v, Vector pivot, Rotation r)
 {
 	return VectorAdd(VectorRotate(VectorSubtract(v, pivot), r), pivot);
 }
@@ -122,33 +122,55 @@ Vector VectorForDirection(Direction d)
 {
 	switch (d)
 	{
-		case North:
+		case DirectionNorth:
 			return kVectorNorth;
 			
-		case Northeast:
+		case DirectionNortheast:
 			return kVectorNortheast;
 			
-		case East:
+		case DirectionEast:
 			return kVectorEast;
 			
-		case Southeast:
+		case DirectionSoutheast:
 			return kVectorSoutheast;
 			
-		case South:
+		case DirectionSouth:
 			return kVectorSouth;
 			
-		case Southwest:
+		case DirectionSouthwest:
 			return kVectorSouthwest;
 			
-		case West:
+		case DirectionWest:
 			return kVectorWest;
 			
-		case Northwest:
+		case DirectionNorthwest:
 			return kVectorNorthwest;
 			
 		default:
 			return kVectorZero;
 		
+	}
+}
+
+Vector VectorForMainDirection(MainDirection d)
+{
+	switch (d)
+	{
+		case MainDirectionNorth:
+			return kVectorNorth;
+			
+		case MainDirectionEast:
+			return kVectorEast;
+			
+		case MainDirectionSouth:
+			return kVectorSouth;
+			
+		case MainDirectionWest:
+			return kVectorWest;
+			
+		default:
+			return kVectorZero;
+			
 	}
 }
 

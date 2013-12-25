@@ -8,7 +8,7 @@
 
 #import "Dice.h"
 #import "DiceNotationTerm.h"
-#import "DiceNotationTermStack.h"
+#import "Stack.h"
 
 @implementation Dice
 
@@ -106,12 +106,10 @@ int roll(int sides)
 		}
 	}
 	
-	//NSLog(@"%@", [infix debugDescription]);
-	
 	// Convert infix to postfix
 	// http://faculty.cs.niu.edu/~hutchins/csci241/eval.htm
 	NSMutableArray* postfix = [[NSMutableArray alloc] init];
-	DiceNotationTermStack* conversionStack = [[DiceNotationTermStack alloc] init];
+	Stack* conversionStack = [[Stack alloc] init];
 	
 	for (int i = 0; i < infix.count; i++)
 	{
@@ -132,7 +130,7 @@ int roll(int sides)
 			
 			while (!conversionStack.isEmpty)
 			{
-				if (conversionStack.topTerm.type == TermLeftParenthesis)
+				if (((DiceNotationTerm*)conversionStack.topObject).type == TermLeftParenthesis)
 				{
 					[conversionStack pop];
 					break;
@@ -145,13 +143,13 @@ int roll(int sides)
 		}
 		else if (term.type == TermOperator)
 		{
-			if (conversionStack.isEmpty || (conversionStack.topTerm.type == TermLeftParenthesis))
+			if (conversionStack.isEmpty || (((DiceNotationTerm*)conversionStack.topObject).type == TermLeftParenthesis))
 			{
 				[conversionStack push:term];
 			}
 			else
 			{
-				while (!conversionStack.isEmpty && (conversionStack.topTerm.type != TermLeftParenthesis) && (term.precedence <= conversionStack.topTerm.precedence))
+				while (!conversionStack.isEmpty && (((DiceNotationTerm*)conversionStack.topObject).type != TermLeftParenthesis) && (term.precedence <= ((DiceNotationTerm*)conversionStack.topObject).precedence))
 				{
 					[postfix addObject:[conversionStack pop]];
 				}
@@ -163,16 +161,14 @@ int roll(int sides)
 	
 	while (conversionStack.size > 0)
 	{
-		if (conversionStack.topTerm.type == TermLeftParenthesis)
+		if (((DiceNotationTerm*)conversionStack.topObject).type == TermLeftParenthesis)
 			@throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Unbalanced parentheses in expression." userInfo:nil];
 		
 		[postfix addObject:[conversionStack pop]];
 	}
 	
-	//NSLog(@"%@", [postfix debugDescription]);
-	
 	// Evaluate expression
-	DiceNotationTermStack* evaluationStack = [[DiceNotationTermStack alloc] init];
+	Stack* evaluationStack = [[Stack alloc] init];
 	
 	for (int i = 0; i < postfix.count; i++)
 	{
@@ -191,7 +187,7 @@ int roll(int sides)
 		}
 	}
 	
-	result = evaluationStack.topTerm.value;
+	result = ((DiceNotationTerm*)conversionStack.topObject).value;
 	
 	return result;
 }

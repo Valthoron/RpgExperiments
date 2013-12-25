@@ -11,30 +11,40 @@
 #import "Tile.h"
 #import "Directions.h"
 #import "Anchor.h"
+#import "TouchXML.h"
 
 @interface Map : NSObject
 {
-	NSMutableArray* tiles;
-	Anchor anchor;
-	NSMutableArray* openAnchors;
+	NSMapTable* tiles;
+	NSMutableArray* anchors;
 }
 
+@property (nonatomic, readonly) BOOL isRectangular;
+@property (nonatomic, readonly) Vector minimumCoordinates;
+@property (nonatomic, readonly) Vector maximumCoordinates;
 @property (nonatomic, readonly) NSUInteger width;
 @property (nonatomic, readonly) NSUInteger height;
+@property (nonatomic, readwrite) Anchor* baseAnchor;
+@property (nonatomic, readonly) NSUInteger anchorCount;
 @property (nonatomic, readonly) NSMutableDictionary* metadata;
 
-- (id)initWithWidth:(NSUInteger)width andHeight:(NSUInteger)height;
+// Initializers
+- (id)initRectangularWithWidth:(NSUInteger)width andHeight:(NSUInteger)height;
+- (id)initWithXmlElement:(CXMLElement*)xmlElement;
 
-- (Tile*)tileAt:(Vector)coordinate;
-- (void)addTile:(Tile*)tile;
-- (void)removeTileAt:(Vector)coordinate;
+// Getting information
+- (Tile*)tileAt:(Vector)location;
+- (BOOL)isLocationEmpty:(Vector)location;
+- (NSUInteger)anchorCount;
+- (Anchor*)anchorAtIndex:(NSUInteger)index;
+- (BOOL)containsCoordinates:(Vector)coordinates;
+- (BOOL)containsCoordinates:(Vector)coordinates inBand:(NSUInteger)band;
 
-- (void)placeMapAt:(Anchor)openAnchor;
-
-- (BOOL)containsCoordinate:(Vector)coordinate;
-- (BOOL)containsCoordinate:(Vector)coordinate withinBand:(NSUInteger)band;
-
-- (void)rotate:(Rotation)direction;
-- (void)realignOrigin;
+// Modification
+- (void)addTile:(Tile*)tile at:(Vector)location;
+- (void)removeTileAt:(Vector)location;
+- (void)addAnchor:(Anchor*)anchor;
+- (void)removeAnchorAt:(NSUInteger)index;
+- (BOOL)placeMap:(Map*)map atAnchorIndexed:(NSUInteger)index force:(BOOL)forcePlace;
 
 @end

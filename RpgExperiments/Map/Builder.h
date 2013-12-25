@@ -12,10 +12,13 @@
 
 @interface Builder : NSObject
 {
+	MersenneRandom* random;
+	NSMutableDictionary* parameterDefaults;
+	
+	NSDictionary* parameters;
 	NSUInteger width;
 	NSUInteger height;
-	MersenneRandom* random;
-	NSMutableArray* parameters;
+	
 	Map* map;
 }
 

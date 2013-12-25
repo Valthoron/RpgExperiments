@@ -8,18 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class DiceNotationTerm;
-
-@interface DiceNotationTermStack : NSObject
+@interface Stack : NSObject
 {
 	NSMutableArray* stack;
 }
 
-@property (nonatomic, readonly) DiceNotationTerm* topTerm;
+@property (nonatomic, readonly) id topObject;
 @property (nonatomic, readonly) NSUInteger size;
 @property (nonatomic, readonly) BOOL isEmpty;
 
-- (void)push:(DiceNotationTerm*)term;
-- (DiceNotationTerm*)pop;
+- (void)push:(id)object;
+- (id)pop;
 
 @end

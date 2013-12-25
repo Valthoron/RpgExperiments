@@ -8,24 +8,35 @@
 
 typedef enum
 {
-	North = 0,
-	Northeast,
-	East,
-	Southeast,
-	South,
-	Southwest,
-	West,
-	Northwest,
-	None = 10
+	MainDirectionNorth = 0,
+	MainDirectionEast,
+	MainDirectionSouth,
+	MainDirectionWest,
+	MainDirectionNone = 10
+} MainDirection;
+
+typedef enum
+{
+	DirectionNorth = 0,
+	DirectionNortheast,
+	DirectionEast,
+	DirectionSoutheast,
+	DirectionSouth,
+	DirectionSouthwest,
+	DirectionWest,
+	DirectionNorthwest,
+	DirectionNone = 10
 } Direction;
 
 typedef enum
 {
-	Zero = 0,
-	Clockwise_90 = 1,
-	Clockwise_180 = 2,
-	CounterClockwise_180 = 2,
-	CounterClockwise_90 = 3
+	RotationZero = 0,
+	RotationClockwise90 = 1,
+	RotationClockwise180 = 2,
+	RotationCounterClockwise180 = 2,
+	RotationCounterClockwise90 = 3
 } Rotation;
 
-inline Direction RotateDirection(Direction d, Rotation r);
+inline MainDirection MainDirectonFromString(NSString* string);
+inline MainDirection RotateMainDirection(MainDirection d, Rotation r);
+inline Rotation FindRotation(MainDirection start, MainDirection end);

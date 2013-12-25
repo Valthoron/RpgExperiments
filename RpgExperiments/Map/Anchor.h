@@ -9,8 +9,13 @@
 #import "Vector.h"
 #import "Directions.h"
 
-typedef struct
-{
-	Vector coordinate;
-	Direction direction;
-} Anchor;
+@interface Anchor : NSObject <NSCopying>
+
+@property (nonatomic) Vector location;
+@property (nonatomic) MainDirection direction;
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic) NSInteger type;
+
++ (Anchor*)anchorAt:(Vector)location inDirection:(MainDirection)direction withName:(NSString*)name andSubtype:(NSInteger)type;
+
+@end

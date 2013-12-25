@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<builderdata builder="dungeon">
+	<rooms>
+		<room name="Start Room" group="Room">
+			<tiles>
+				<tile x="0" y="0" type="1"/>
+				<tile x="1" y="0" type="1"/>
+				<tile x="2" y="0" type="1"/>
+				<tile x="3" y="0" type="1"/>
+				<tile x="4" y="0" type="1"/>
+				<tile x="5" y="0" type="1"/>
+				<tile x="6" y="0" type="1"/>
+				<tile x="0" y="1" type="1"/>
+				<tile x="1" y="1" type="2"/>
+				<tile x="2" y="1" type="2"/>
+				<tile x="3" y="1" type="2"/>
+				<tile x="4" y="1" type="2"/>
+				<tile x="5" y="1" type="2"/>
+				<tile x="6" y="1" type="1"/>
+				<tile x="1" y="2" type="2"/>
+				<tile x="2" y="2" type="2"/>
+				<tile x="3" y="2" type="2"/>
+				<tile x="4" y="2" type="2"/>
+				<tile x="5" y="2" type="2"/>
+				<tile x="1" y="3" type="2"/>
+				<tile x="2" y="3" type="2"/>
+				<tile x="3" y="3" type="2"/>
+				<tile x="4" y="3" type="2"/>
+				<tile x="5" y="3" type="2"/>
+				<tile x="1" y="4" type="2"/>
+				<tile x="2" y="4" type="2"/>
+				<tile x="3" y="4" type="2"/>
+				<tile x="4" y="4" type="2"/>
+				<tile x="5" y="4" type="2"/>
+				<tile x="0" y="5" type="1"/>
+				<tile x="1" y="5" type="2"/>
+				<tile x="2" y="5" type="2"/>
+				<tile x="3" y="5" type="2"/>
+				<tile x="4" y="5" type="2"/>
+				<tile x="5" y="5" type="2"/>
+				<tile x="6" y="5" type="1"/>
+				<tile x="0" y="6" type="1"/>
+				<tile x="1" y="6" type="1"/>
+				<tile x="5" y="6" type="1"/>
+				<tile x="6" y="6" type="1"/>
+			</tiles>
+			<anchors>
+				<baseanchor x="3" y="0" direction="N"/>
+				<anchor x="0" y="3" direction="W" type="0"/>
+				<anchor x="3" y="6" direction="N" type="0"/>
+				<anchor x="6" y="3" direction="E" type="0"/>
+			</anchors>
+		</room>
+		<room name="Room 1" group="Room">
+			<tiles>
+				<tile x="0" y="0" type="1"/>
+				<tile x="1" y="0" type="1"/>
+				<tile x="5" y="0" type="1"/>
+				<tile x="6" y="0" type="1"/>
+				<tile x="0" y="1" type="1"/>
+				<tile x="1" y="1" type="2"/>
+				<tile x="2" y="1" type="2"/>
+				<tile x="3" y="1" type="2"/>
+				<tile x="4" y="1" type="2"/>
+				<tile x="5" y="1" type="2"/>
+				<tile x="6" y="1" type="1"/>
+				<tile x="1" y="2" type="2"/>
+				<tile x="2" y="2" type="2"/>
+				<tile x="3" y="2" type="2"/>
+				<tile x="4" y="2" type="2"/>
+				<tile x="5" y="2" type="2"/>
+				<tile x="1" y="3" type="2"/>
+				<tile x="2" y="3" type="2"/>
+				<tile x="3" y="3" type="2"/>
+				<tile x="4" y="3" type="2"/>
+				<tile x="5" y="3" type="2"/>
+				<tile x="1" y="4" type="2"/>
+				<tile x="2" y="4" type="2"/>
+				<tile x="3" y="4" type="2"/>
+				<tile x="4" y="4" type="2"/>
+				<tile x="5" y="4" type="2"/>
+				<tile x="0" y="5" type="1"/>
+				<tile x="1" y="5" type="2"/>
+				<tile x="2" y="5" type="2"/>
+				<tile x="3" y="5" type="2"/>
+				<tile x="4" y="5" type="2"/>
+				<tile x="5" y="5" type="2"/>
+				<tile x="6" y="5" type="1"/>
+				<tile x="0" y="6" type="1"/>
+				<tile x="1" y="6" type="1"/>
+				<tile x="5" y="6" type="1"/>
+				<tile x="6" y="6" type="1"/>
+			</tiles>
+			<anchors>
+				<baseanchor x="3" y="1" direction="N"/>
+				<anchor x="0" y="3" direction="W" type="0"/>
+				<anchor x="3" y="6" direction="N" type="0"/>
+				<anchor x="6" y="3" direction="E" type="0"/>
+			</anchors>
+		</room>
+		<room name="Corridor Short" group="Corridor">
+			<tiles>
+				<tile x="0" y="0" type="1"/>
+				<tile x="1" y="0" type="2"/>
+				<tile x="2" y="0" type="1"/>
+				<tile x="0" y="1" type="1"/>
+				<tile x="1" y="1" type="2"/>
+				<tile x="2" y="1" type="1"/>
+				<tile x="0" y="2" type="1"/>
+				<tile x="1" y="2" type="2"/>
+				<tile x="2" y="2" type="1"/>
+				<tile x="0" y="3" type="1"/>
+				<tile x="1" y="3" type="2"/>
+				<tile x="2" y="3" type="1"/>
+				<tile x="0" y="4" type="1"/>
+				<tile x="1" y="4" type="2"/>
+				<tile x="2" y="4" type="1"/>
+			</tiles>
+			<anchors>
+				<baseanchor x="1" y="0" direction="N"/>
+				<anchor x="1" y="5" direction="N" type="0"/>
+			</anchors>
+		</room>
+		<room name="Corridor Long" group="Corridor">
+			<tiles>
+				<tile x="0" y="0" type="1"/>
+				<tile x="1" y="0" type="2"/>
+				<tile x="2" y="0" type="1"/>
+				<tile x="0" y="1" type="1"/>
+				<tile x="1" y="1" type="2"/>
+				<tile x="2" y="1" type="1"/>
+				<tile x="0" y="2" type="1"/>
+				<tile x="1" y="2" type="2"/>
+				<tile x="2" y="2" type="1"/>
+				<tile x="0" y="3" type="1"/>
+				<tile x="1" y="3" type="2"/>
+				<tile x="2" y="3" type="1"/>
+				<tile x="0" y="4" type="1"/>
+				<tile x="1" y="4" type="2"/>
+				<tile x="2" y="4" type="1"/>
+				<tile x="0" y="5" type="1"/>
+				<tile x="1" y="5" type="2"/>
+				<tile x="2" y="5" type="1"/>
+				<tile x="0" y="6" type="1"/>
+				<tile x="1" y="6" type="2"/>
+				<tile x="2" y="6" type="1"/>
+				<tile x="0" y="7" type="1"/>
+				<tile x="1" y="7" type="2"/>
+				<tile x="2" y="7" type="1"/>
+			</tiles>
+			<anchors>
+				<baseanchor x="1" y="0" direction="N"/>
+				<anchor x="1" y="8" direction="N" type="0"/>
+			</anchors>
+		</room>
+		<room name="End Cap">
+			<tiles>
+				<tile x="0" y="0" type="1"/>
+				<tile x="1" y="0" type="1"/>
+				<tile x="2" y="0" type="1"/>
+			</tiles>
+			<anchors>
+				<baseanchor x="1" y="0" direction="N"/>
+			</anchors>
+		</room>
+	</rooms>
+	<rules>
+		<startrule place="Start Room"/>
+		<terminaterule room="*" place="End Cap"/>
+		<rule group="Room" anchortype="0" place="Corridor Short"/>
+		<rule group="Room" anchortype="0" place="Corridor Long"/>
+		<rule group="Room" anchortype="0" place="End Cap">
+			<prerequisite variable="_anchorCount" comparison="greater" value="2"/>
+		</rule>
+		<rule group="Corridor" anchortype="0" place="Room 1">
+			<weight value="4"/>
+			<result variable="roomCount" operation="add" value="1"/>
+		</rule>
+		<rule room="*" anchortype="0" place="End Cap">
+			<prerequisite variable="roomCount" comparison="greaterequal" value="20"/>
+			<weight value="10000"/>
+		</rule>
+	</rules>
+</builderdata>

@@ -80,7 +80,7 @@
 	NSString* builderSeed = [[map.metadata objectForKey:@"builderSeed"] stringValue];
 	NSString* fileName = [NSString stringWithFormat:@"%@ %@.png", builderName, builderSeed];
 	
-	NSString* details = [NSString stringWithFormat:@"%ld × %ld\n%@", (unsigned long)map.width, (unsigned long)map.height, [map.metadata debugDescription]];
+	NSString* details = [NSString stringWithFormat:@"{%ld, %ld} → {%ld, %ld} (%ld × %ld)\n%@", map.minimumCoordinates.x, map.minimumCoordinates.y, map.maximumCoordinates.x, map.maximumCoordinates.y, (unsigned long)map.width, (unsigned long)map.height, [map.metadata debugDescription]];
 	
 	NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
     NSString* desktopPath = [paths objectAtIndex:0];

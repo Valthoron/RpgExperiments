@@ -18,6 +18,7 @@
 @property (weak) IBOutlet NSPopUpButton* buildersPopupButton;
 @property (weak) IBOutlet NSTextField* widthTextField;
 @property (weak) IBOutlet NSTextField* heightTextField;
+@property (weak) IBOutlet NSButton *generateButton;
 @property (nonatomic, strong) IBOutlet NSDictionaryController* parametersController;
 @property (nonatomic, strong) NSMutableDictionary* parameters;
 @property (nonatomic, strong) NSArray* builders;

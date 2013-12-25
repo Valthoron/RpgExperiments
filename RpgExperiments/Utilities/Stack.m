@@ -1,14 +1,14 @@
 //
-//  DiceNotationTermStack.m
+//  Stack.m
 //  RpgExperimentsConsole
 //
 //  Created by Serdar Üşenmez on 21.04.2013.
 //  Copyright (c) 2013 Serdar Üşenmez. All rights reserved.
 //
 
-#import "DiceNotationTermStack.h"
+#import "Stack.h"
 
-@implementation DiceNotationTermStack
+@implementation Stack
 
 - (id)init
 {
@@ -22,9 +22,9 @@
 	return self;
 }
 
-- (DiceNotationTerm*)topTerm
+- (id)topObject
 {
-	return (DiceNotationTerm*)stack.lastObject;
+	return stack.lastObject;
 }
 
 - (NSUInteger)size
@@ -37,16 +37,16 @@
 	return (stack.count == 0);
 }
 
-- (void)push:(DiceNotationTerm *)term
+- (void)push:(id)object
 {
-	[stack addObject:term];
+	[stack addObject:object];
 }
 
-- (DiceNotationTerm*)pop
+- (id)pop
 {
-	DiceNotationTerm* term = (DiceNotationTerm*)stack.lastObject;
+	id object = stack.lastObject;
 	[stack removeLastObject];
-	return term;
+	return object;
 }
 
 @end

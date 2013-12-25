@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -76,6 +76,33 @@
                             <menuItem title="Save as Image" keyEquivalent="s" id="585">
                                 <connections>
                                     <action selector="saveMapAsImage:" target="494" id="587"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="ZRS-e1-luZ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="45J-Vr-kGo">
+                        <items>
+                            <menuItem title="Cut" keyEquivalent="x" id="DcU-s5-6Ff">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="nWB-as-MaL"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="6ZS-CZ-fmS">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="stD-G2-kzX"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="bcc-za-GJC">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="QJp-2U-Otb"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="kOC-A1-3Og">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="DQD-zR-PdQ"/>
                                 </connections>
                             </menuItem>
                         </items>

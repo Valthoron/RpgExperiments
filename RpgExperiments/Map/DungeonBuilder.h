@@ -9,5 +9,21 @@
 #import "Builder.h"
 
 @interface DungeonBuilder : Builder
+{
+	NSMutableDictionary* rooms;
+	NSMutableDictionary* roomGroups;
+	
+	NSMutableArray* startRules;
+	NSMutableArray* rules;
+	NSMutableArray* terminateRules;
+	
+	NSMutableDictionary* variables;
+	
+	NSMutableDictionary* anchorTries;
+	
+	int iterationLimit;
+	int anchorTryLimit;
+	NSString* xmlPath;
+}
 
 @end

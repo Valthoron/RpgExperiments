@@ -14,9 +14,11 @@
 	
 }
 
-@property (nonatomic) Vector coordinate;
-@property (nonatomic) NSUInteger tileId;
+//@property (nonatomic) Vector location;
+@property (nonatomic) NSUInteger type;
 @property (nonatomic) NSUInteger roomId;
 @property (nonatomic) NSString* tag;
+
++ (Tile*)tileWithType:(NSUInteger)type;
 
 @end

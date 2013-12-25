@@ -19,10 +19,10 @@
 	
     if (self)
 	{
-		NSMutableArray* builders = [[NSMutableArray alloc] init];
-		[builders addObject:[[CaveBuilder alloc] init]];
-		[builders addObject:[[DungeonBuilder alloc] init]];
-		_builders = [builders copy];
+		_builders = [NSMutableArray arrayWithObjects:
+					 [[CaveBuilder alloc] init],
+					 [[DungeonBuilder alloc] init],
+					 nil];
 		_parameters = [[NSMutableDictionary alloc] init];
 		
 		NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -49,6 +49,8 @@
 		[_parameters addEntriesFromDictionary:[record objectForKey:@"configuration"]];
 		[self didChangeValueForKey:@"parameters"];
 	}
+	
+	[_generateButton setKeyEquivalent:@"\r"];
 }
 
 - (IBAction)addParameter:(id)sender

@@ -12,16 +12,29 @@
 		7507C8D0172EDE320042FB66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8CF172EDE320042FB66 /* main.m */; };
 		7507C8D4172EDE320042FB66 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7507C8D2172EDE320042FB66 /* Credits.rtf */; };
 		7507C8D7172EDE320042FB66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8D6172EDE320042FB66 /* AppDelegate.m */; };
-		7507C8DA172EDE320042FB66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7507C8D8172EDE320042FB66 /* MainMenu.xib */; };
 		7507C8F4172F05370042FB66 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E2172F047D0042FB66 /* Dice.m */; };
 		7507C8F5172F05370042FB66 /* DiceNotationTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */; };
-		7507C8F6172F05370042FB66 /* DiceNotationTermStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */; };
-		7535DA74173FDBFE000C193D /* QuestNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535DA73173FDBFE000C193D /* QuestNode.m */; };
+		754768AA18635516007AC3A3 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547688F18635516007AC3A3 /* CXMLDocument_CreationExtensions.m */; };
+		754768AB18635516007AC3A3 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689118635516007AC3A3 /* CXMLNode_CreationExtensions.m */; };
+		754768AC18635516007AC3A3 /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689318635516007AC3A3 /* CXHTMLDocument.m */; };
+		754768AD18635516007AC3A3 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689518635516007AC3A3 /* CXMLDocument.m */; };
+		754768AE18635516007AC3A3 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689718635516007AC3A3 /* CXMLDocument_PrivateExtensions.m */; };
+		754768AF18635516007AC3A3 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689918635516007AC3A3 /* CXMLElement.m */; };
+		754768B018635516007AC3A3 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689B18635516007AC3A3 /* CXMLElement_CreationExtensions.m */; };
+		754768B118635516007AC3A3 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689D18635516007AC3A3 /* CXMLElement_ElementTreeExtensions.m */; };
+		754768B218635516007AC3A3 /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7547689F18635516007AC3A3 /* CXMLNamespaceNode.m */; };
+		754768B318635516007AC3A3 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 754768A118635516007AC3A3 /* CXMLNode.m */; };
+		754768B418635516007AC3A3 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 754768A318635516007AC3A3 /* CXMLNode_PrivateExtensions.m */; };
+		754768B518635516007AC3A3 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 754768A518635516007AC3A3 /* CXMLNode_XPathExtensions.m */; };
+		754768B618635516007AC3A3 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 754768A818635516007AC3A3 /* CTidy.m */; };
+		754768BB186448D2007AC3A3 /* DungeonBuilderRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 754768BA186448D2007AC3A3 /* DungeonBuilderRule.m */; };
+		7550959E186B01EF006ED4BC /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7550959D186B01EF006ED4BC /* Stack.m */; };
 		756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756F0AE717342AE8008D007B /* NSValue+Vector.m */; };
+		7572302B186AEB7E00C4456D /* QuestNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7572302A186AEB7E00C4456D /* QuestNode.m */; };
 		75B0FCE618563436008137C2 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7507C8F0172F047D0042FB66 /* Vector.m */; };
 		75B0FCEA18572D8B008137C2 /* Directions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B0FCE918572D8B008137C2 /* Directions.m */; };
+		75B0FCEC1858D06C008137C2 /* Anchor.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B0FCEB1858D06C008137C2 /* Anchor.m */; };
 		75BAB0D21847818400F9CB65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BAB0D11847818400F9CB65 /* QuartzCore.framework */; };
-		75BE6F9B185495CB0014FD75 /* BuilderParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BE6F9A185495CB0014FD75 /* BuilderParameter.m */; };
 		75C077351848CFF700489C13 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C077341848CFF700489C13 /* Tile.m */; };
 		75C16F9617311AB900074D0F /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9417311AB900074D0F /* Map.m */; };
 		75C16F9917311AF500074D0F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C16F9817311AF500074D0F /* MapView.m */; };
@@ -32,6 +45,7 @@
 		75E9C1D81851BEF6008730CC /* MapGenerateDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E9C1D71851BEF6008730CC /* MapGenerateDialog.xib */; };
 		75E9C1DB1851C4D2008730CC /* MapGenerateDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9C1DA1851C4D2008730CC /* MapGenerateDialogController.m */; };
 		75E9C1DE185205E7008730CC /* MapGenerateDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9C1DD185205E7008730CC /* MapGenerateDialog.m */; };
+		75FA0FD918623D5500B990C8 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757A32C618618E7000F53ABF /* MainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,26 +61,56 @@
 		7507C8D3172EDE320042FB66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		7507C8D5172EDE320042FB66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7507C8D6172EDE320042FB66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7507C8D9172EDE320042FB66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7507C8E1172F047D0042FB66 /* Dice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
 		7507C8E2172F047D0042FB66 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		7507C8E3172F047D0042FB66 /* DiceNotationTerm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiceNotationTerm.h; sourceTree = "<group>"; };
 		7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiceNotationTerm.m; sourceTree = "<group>"; };
-		7507C8E5172F047D0042FB66 /* DiceNotationTermStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiceNotationTermStack.h; sourceTree = "<group>"; };
-		7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiceNotationTermStack.m; sourceTree = "<group>"; };
 		7507C8EF172F047D0042FB66 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		7507C8F0172F047D0042FB66 /* Vector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
-		7535DA72173FDBFE000C193D /* QuestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestNode.h; path = Grammar/QuestNode.h; sourceTree = "<group>"; };
-		7535DA73173FDBFE000C193D /* QuestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestNode.m; path = Grammar/QuestNode.m; sourceTree = "<group>"; };
+		7547688E18635516007AC3A3 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		7547688F18635516007AC3A3 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		7547689018635516007AC3A3 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		7547689118635516007AC3A3 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		7547689218635516007AC3A3 /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		7547689318635516007AC3A3 /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		7547689418635516007AC3A3 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		7547689518635516007AC3A3 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		7547689618635516007AC3A3 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		7547689718635516007AC3A3 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		7547689818635516007AC3A3 /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		7547689918635516007AC3A3 /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		7547689A18635516007AC3A3 /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		7547689B18635516007AC3A3 /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		7547689C18635516007AC3A3 /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		7547689D18635516007AC3A3 /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		7547689E18635516007AC3A3 /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		7547689F18635516007AC3A3 /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		754768A018635516007AC3A3 /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		754768A118635516007AC3A3 /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		754768A218635516007AC3A3 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		754768A318635516007AC3A3 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		754768A418635516007AC3A3 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		754768A518635516007AC3A3 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		754768A718635516007AC3A3 /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		754768A818635516007AC3A3 /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		754768A918635516007AC3A3 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		754768B71863554F007AC3A3 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		754768B9186448D2007AC3A3 /* DungeonBuilderRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DungeonBuilderRule.h; sourceTree = "<group>"; };
+		754768BA186448D2007AC3A3 /* DungeonBuilderRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DungeonBuilderRule.m; sourceTree = "<group>"; };
+		754768BC1864567F007AC3A3 /* DungeonBuilderRuleHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DungeonBuilderRuleHelpers.h; sourceTree = "<group>"; };
+		7550959C186B01EF006ED4BC /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		7550959D186B01EF006ED4BC /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		756F0AE617342AE8008D007B /* NSValue+Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Vector.h"; sourceTree = "<group>"; };
 		756F0AE717342AE8008D007B /* NSValue+Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Vector.m"; sourceTree = "<group>"; };
+		75723029186AEB7E00C4456D /* QuestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestNode.h; path = QuestBuilder/QuestNode.h; sourceTree = "<group>"; };
+		7572302A186AEB7E00C4456D /* QuestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestNode.m; path = QuestBuilder/QuestNode.m; sourceTree = "<group>"; };
+		757A32C618618E7000F53ABF /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		75B0FCE71856360C008137C2 /* Directions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Directions.h; sourceTree = "<group>"; };
 		75B0FCE818572C9A008137C2 /* Anchor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Anchor.h; sourceTree = "<group>"; };
 		75B0FCE918572D8B008137C2 /* Directions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Directions.m; sourceTree = "<group>"; };
+		75B0FCEB1858D06C008137C2 /* Anchor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Anchor.m; sourceTree = "<group>"; };
 		75BAB0CF184780BE00F9CB65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75BAB0D11847818400F9CB65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		75BE6F99185495CB0014FD75 /* BuilderParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuilderParameter.h; sourceTree = "<group>"; };
-		75BE6F9A185495CB0014FD75 /* BuilderParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuilderParameter.m; sourceTree = "<group>"; };
 		75C077331848CFF700489C13 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		75C077341848CFF700489C13 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		75C16F9317311AB900074D0F /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
@@ -122,6 +166,7 @@
 		7507C8C2172EDE320042FB66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				754768B71863554F007AC3A3 /* libxml2.2.dylib */,
 				75BAB0D11847818400F9CB65 /* QuartzCore.framework */,
 				75BAB0CF184780BE00F9CB65 /* CoreGraphics.framework */,
 				7507C8C3172EDE320042FB66 /* Cocoa.framework */,
@@ -145,7 +190,7 @@
 			children = (
 				7507C8D5172EDE320042FB66 /* AppDelegate.h */,
 				7507C8D6172EDE320042FB66 /* AppDelegate.m */,
-				7507C8D8172EDE320042FB66 /* MainMenu.xib */,
+				757A32C618618E7000F53ABF /* MainView.xib */,
 				75E9C1DC185205E7008730CC /* MapGenerateDialog.h */,
 				75E9C1DD185205E7008730CC /* MapGenerateDialog.m */,
 				75E9C1D71851BEF6008730CC /* MapGenerateDialog.xib */,
@@ -154,8 +199,8 @@
 				75C16F9717311AF500074D0F /* MapView.h */,
 				75C16F9817311AF500074D0F /* MapView.m */,
 				7507C8E0172F047D0042FB66 /* Dice */,
-				7535DA71173FCF77000C193D /* QuestBuilder */,
 				75C16F8F17311AB900074D0F /* Map */,
+				7535DA71173FCF77000C193D /* QuestBuilder */,
 				7507C8CA172EDE320042FB66 /* Supporting Files */,
 				7507C8EC172F047D0042FB66 /* Utilities */,
 			);
@@ -181,8 +226,6 @@
 				7507C8E2172F047D0042FB66 /* Dice.m */,
 				7507C8E3172F047D0042FB66 /* DiceNotationTerm.h */,
 				7507C8E4172F047D0042FB66 /* DiceNotationTerm.m */,
-				7507C8E5172F047D0042FB66 /* DiceNotationTermStack.h */,
-				7507C8E6172F047D0042FB66 /* DiceNotationTermStack.m */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -192,12 +235,15 @@
 			children = (
 				75B0FCE71856360C008137C2 /* Directions.h */,
 				75B0FCE918572D8B008137C2 /* Directions.m */,
-				756F0AE617342AE8008D007B /* NSValue+Vector.h */,
-				756F0AE717342AE8008D007B /* NSValue+Vector.m */,
 				75C16FA81731871400074D0F /* MersenneRandom.h */,
 				75C16FA91731871400074D0F /* MersenneRandom.m */,
+				756F0AE617342AE8008D007B /* NSValue+Vector.h */,
+				756F0AE717342AE8008D007B /* NSValue+Vector.m */,
+				7550959C186B01EF006ED4BC /* Stack.h */,
+				7550959D186B01EF006ED4BC /* Stack.m */,
 				7507C8EF172F047D0042FB66 /* Vector.h */,
 				7507C8F0172F047D0042FB66 /* Vector.m */,
+				7547688C18635516007AC3A3 /* TouchXML */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -205,21 +251,70 @@
 		7535DA71173FCF77000C193D /* QuestBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				7535DA72173FDBFE000C193D /* QuestNode.h */,
-				7535DA73173FDBFE000C193D /* QuestNode.m */,
+				75723029186AEB7E00C4456D /* QuestNode.h */,
+				7572302A186AEB7E00C4456D /* QuestNode.m */,
 			);
 			name = QuestBuilder;
+			sourceTree = "<group>";
+		};
+		7547688C18635516007AC3A3 /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				7547688D18635516007AC3A3 /* Creation */,
+				7547689218635516007AC3A3 /* CXHTMLDocument.h */,
+				7547689318635516007AC3A3 /* CXHTMLDocument.m */,
+				7547689418635516007AC3A3 /* CXMLDocument.h */,
+				7547689518635516007AC3A3 /* CXMLDocument.m */,
+				7547689618635516007AC3A3 /* CXMLDocument_PrivateExtensions.h */,
+				7547689718635516007AC3A3 /* CXMLDocument_PrivateExtensions.m */,
+				7547689818635516007AC3A3 /* CXMLElement.h */,
+				7547689918635516007AC3A3 /* CXMLElement.m */,
+				7547689A18635516007AC3A3 /* CXMLElement_CreationExtensions.h */,
+				7547689B18635516007AC3A3 /* CXMLElement_CreationExtensions.m */,
+				7547689C18635516007AC3A3 /* CXMLElement_ElementTreeExtensions.h */,
+				7547689D18635516007AC3A3 /* CXMLElement_ElementTreeExtensions.m */,
+				7547689E18635516007AC3A3 /* CXMLNamespaceNode.h */,
+				7547689F18635516007AC3A3 /* CXMLNamespaceNode.m */,
+				754768A018635516007AC3A3 /* CXMLNode.h */,
+				754768A118635516007AC3A3 /* CXMLNode.m */,
+				754768A218635516007AC3A3 /* CXMLNode_PrivateExtensions.h */,
+				754768A318635516007AC3A3 /* CXMLNode_PrivateExtensions.m */,
+				754768A418635516007AC3A3 /* CXMLNode_XPathExtensions.h */,
+				754768A518635516007AC3A3 /* CXMLNode_XPathExtensions.m */,
+				754768A618635516007AC3A3 /* Tidy */,
+				754768A918635516007AC3A3 /* TouchXML.h */,
+			);
+			path = TouchXML;
+			sourceTree = "<group>";
+		};
+		7547688D18635516007AC3A3 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				7547688E18635516007AC3A3 /* CXMLDocument_CreationExtensions.h */,
+				7547688F18635516007AC3A3 /* CXMLDocument_CreationExtensions.m */,
+				7547689018635516007AC3A3 /* CXMLNode_CreationExtensions.h */,
+				7547689118635516007AC3A3 /* CXMLNode_CreationExtensions.m */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		754768A618635516007AC3A3 /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				754768A718635516007AC3A3 /* CTidy.h */,
+				754768A818635516007AC3A3 /* CTidy.m */,
+			);
+			path = Tidy;
 			sourceTree = "<group>";
 		};
 		75C16F8F17311AB900074D0F /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				75B0FCE818572C9A008137C2 /* Anchor.h */,
+				75B0FCEB1858D06C008137C2 /* Anchor.m */,
 				75C16F9A173162A400074D0F /* Builder.h */,
 				75C16F9B173162A400074D0F /* Builder.m */,
 				75E9C1DF1854767E008730CC /* Builder_Subclass.h */,
-				75BE6F99185495CB0014FD75 /* BuilderParameter.h */,
-				75BE6F9A185495CB0014FD75 /* BuilderParameter.m */,
 				75C16F9317311AB900074D0F /* Map.h */,
 				75C16F9417311AB900074D0F /* Map.m */,
 				75C077331848CFF700489C13 /* Tile.h */,
@@ -236,6 +331,9 @@
 				75C16F9F1731667E00074D0F /* CaveBuilder.m */,
 				75C16FA1173166AA00074D0F /* DungeonBuilder.h */,
 				75C16FA2173166AA00074D0F /* DungeonBuilder.m */,
+				754768B9186448D2007AC3A3 /* DungeonBuilderRule.h */,
+				754768BA186448D2007AC3A3 /* DungeonBuilderRule.m */,
+				754768BC1864567F007AC3A3 /* DungeonBuilderRuleHelpers.h */,
 			);
 			name = Builders;
 			sourceTree = "<group>";
@@ -292,8 +390,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7507C8CE172EDE320042FB66 /* InfoPlist.strings in Resources */,
+				75FA0FD918623D5500B990C8 /* MainView.xib in Resources */,
 				7507C8D4172EDE320042FB66 /* Credits.rtf in Resources */,
-				7507C8DA172EDE320042FB66 /* MainMenu.xib in Resources */,
 				75E9C1D81851BEF6008730CC /* MapGenerateDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,22 +406,36 @@
 				7507C8D7172EDE320042FB66 /* AppDelegate.m in Sources */,
 				7507C8F4172F05370042FB66 /* Dice.m in Sources */,
 				7507C8F5172F05370042FB66 /* DiceNotationTerm.m in Sources */,
-				7507C8F6172F05370042FB66 /* DiceNotationTermStack.m in Sources */,
-				75BE6F9B185495CB0014FD75 /* BuilderParameter.m in Sources */,
+				754768AF18635516007AC3A3 /* CXMLElement.m in Sources */,
+				754768B518635516007AC3A3 /* CXMLNode_XPathExtensions.m in Sources */,
+				754768BB186448D2007AC3A3 /* DungeonBuilderRule.m in Sources */,
+				754768B618635516007AC3A3 /* CTidy.m in Sources */,
 				7507C8D0172EDE320042FB66 /* main.m in Sources */,
+				754768AD18635516007AC3A3 /* CXMLDocument.m in Sources */,
+				7550959E186B01EF006ED4BC /* Stack.m in Sources */,
 				75B0FCE618563436008137C2 /* Vector.m in Sources */,
+				754768AA18635516007AC3A3 /* CXMLDocument_CreationExtensions.m in Sources */,
 				75B0FCEA18572D8B008137C2 /* Directions.m in Sources */,
+				754768B218635516007AC3A3 /* CXMLNamespaceNode.m in Sources */,
+				754768AE18635516007AC3A3 /* CXMLDocument_PrivateExtensions.m in Sources */,
 				75C077351848CFF700489C13 /* Tile.m in Sources */,
+				754768AC18635516007AC3A3 /* CXHTMLDocument.m in Sources */,
 				75C16F9617311AB900074D0F /* Map.m in Sources */,
+				754768B318635516007AC3A3 /* CXMLNode.m in Sources */,
 				75C16F9917311AF500074D0F /* MapView.m in Sources */,
 				75C16F9C173162A400074D0F /* Builder.m in Sources */,
+				7572302B186AEB7E00C4456D /* QuestNode.m in Sources */,
 				75E9C1DE185205E7008730CC /* MapGenerateDialog.m in Sources */,
 				75C16FA01731667E00074D0F /* CaveBuilder.m in Sources */,
+				75B0FCEC1858D06C008137C2 /* Anchor.m in Sources */,
 				75C16FA3173166AA00074D0F /* DungeonBuilder.m in Sources */,
 				75E9C1DB1851C4D2008730CC /* MapGenerateDialogController.m in Sources */,
+				754768B018635516007AC3A3 /* CXMLElement_CreationExtensions.m in Sources */,
+				754768B118635516007AC3A3 /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				754768AB18635516007AC3A3 /* CXMLNode_CreationExtensions.m in Sources */,
+				754768B418635516007AC3A3 /* CXMLNode_PrivateExtensions.m in Sources */,
 				75C16FAA1731871400074D0F /* MersenneRandom.m in Sources */,
 				756F0AE817342AE8008D007B /* NSValue+Vector.m in Sources */,
-				7535DA74173FDBFE000C193D /* QuestNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +456,6 @@
 				7507C8D3172EDE320042FB66 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		7507C8D8172EDE320042FB66 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7507C8D9172EDE320042FB66 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -421,7 +525,14 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RpgExperiments/RpgExperiments-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "RpgExperiments/RpgExperiments-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -434,7 +545,14 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RpgExperiments/RpgExperiments-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "RpgExperiments/RpgExperiments-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

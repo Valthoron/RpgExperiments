@@ -42,6 +42,7 @@ inline float VectorAngleBetween(Vector v1, Vector v2);
 inline Vector VectorRotate(Vector v, Rotation r);
 inline Vector VectorRotateAround(Vector v, Vector pivot, Rotation r);
 inline Vector VectorForDirection(Direction d);
+inline Vector VectorForMainDirection(MainDirection d);
 
 // Instance operations
 NSComparisonResult VectorCompare(Vector v1, Vector v2);
